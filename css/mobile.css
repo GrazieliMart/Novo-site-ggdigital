@@ -1,0 +1,195 @@
+@media screen and (max-width: 900px){
+    nav {
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        height: 100px;
+        z-index: 1000;
+        position: fixed;
+        background-color: #0A0E12;
+    }
+    .video-section {
+         position: relative;
+            width: 100%;
+       padding: 0px;
+        MARGIN-TOP: 100PX;
+        }
+        .empresa img {
+            width: 50px;
+            height: 50px;
+            transition: transform 0.5s;
+        }
+        #logo {
+            margin-left: 15px;
+             margin-right: 20px; 
+            max-height: 50px;
+            width: 150px;
+        }
+        .divforms {
+            padding-top: 100px;
+            padding-bottom: 100px;
+            display: inline;
+            width: 100%;
+        }
+        .content img {
+            width: 85px;
+            font-weight: 900;
+        }
+        .content h2 {
+            font-size: 11px;
+            margin-top: -5px;
+        }
+        .idioma img {
+            width: 20px;
+            height: 10px;
+            cursor: pointer;
+        } 
+        .content {
+            position: absolute;
+            top: 35%;
+            left: 5%;
+            width: 300px;
+            z-index: 10;
+            color: #0a0e12;
+        }
+        .idioma {
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            border: 1px solid #fff;
+            gap: 20px;
+            border-radius: 35px;
+        }
+        
+        .bandeiras-inglaterra {
+            margin-right: -15px;
+        }
+        .bandeiras-brasil {
+            margin-right: -15px;
+        }
+        .animated-button {
+            padding: 10px 26px;
+            margin-right: 20px;
+            font-size: 10px;
+
+            width: 150px;
+        
+        }
+        .animated-button .text {
+            position: relative;
+            z-index: 1;
+            font-size: 10px;
+            transform: translateX(-12px);
+            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .container-custom {
+            display: grid; 
+           justify-content: space-between;
+           align-items: center;
+            width: 100%; 
+            padding-right:0px; 
+            padding-left: 0px; 
+            padding-bottom: 0px;
+           justify-content: center;
+           padding-top: 15px;
+       }
+       .column-custom {
+        text-align: left;
+        padding: 10px;
+        width: 300px;
+        padding-top: 50px;
+    }
+
+       .column-custom img {
+        width: 50px;
+        height: auto;
+    }
+    #parall-mobile{
+        height: 150px;
+    }
+    #div-icons-paralla{
+        display: none;
+    }
+    .button {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 50px;
+        margin-left: 250px;
+        border-radius: 50%;
+        background-color: rgb(20, 20, 20);
+        border: none;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 0px 0px 4px #1c283399;
+        cursor: pointer;
+        transition-duration: 0.3s;
+        overflow: hidden;
+        position: relative;
+    }
+    footer, a {
+        display: inline-block;
+        justify-content: center;
+        color: #cccccc;
+    }
+    .custom-content-wrapper {
+        display: inline;
+        width: 100%;
+        max-width: 1600px;
+    }
+    .cookie-banner {
+        transition: opacity 0.5s ease-in-out;
+        background-color: #000000;
+        color: rgb(255, 255, 255);
+        padding-top: 40px;
+      padding: 0px;
+      padding-top: 40px;
+    
+      padding-right: 10px;
+        padding-bottom: 40px;
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        text-align: center;
+        display: block;
+        z-index: 10000;
+    }
+    .container-custom h1 {
+        color: #fff;
+        margin-top: -3px;
+        font-size: 40px;
+    }
+    .container-custom p {
+        color: #cccccc;
+        font-weight: 700;
+        font-size: 15px;
+        margin-top: -25px;
+    }
+    .portfolio-text p {
+        font-size: 15px;
+    }
+    .container-portfolio {
+        display: inline;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .degrade-lateral{
+        display: none;
+    }
+    .portfolio-text h1 {
+        font-size: 25px;
+    }
+    .faixa-imagens {
+        display: flex;
+        position: relative;
+        animation: moverFaixa 50s linear infinite;
+        margin-left: -350%;
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+}

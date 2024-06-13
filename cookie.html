@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rastrear Tempo no Site</title>
+    <style>
+        /* Estilo para o cookie banner */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="acceptCookies()">Aceitar</button>
+    
+    <div class="cookie-banner" id="cookieBanner" style="display:none;">
+        Este site utiliza cookies para melhorar a sua experiência.
+    </div>
+
+    <script>
+        // Função para definir o horário de entrada
+        function setEntranceTime() {
+            const entranceTime = new Date().getTime(); // Obtém o horário de entrada em milissegundos
+            document.cookie = "entranceTime=" + entranceTime + ";path=/"; // Define o cookie com o horário de entrada
+        }
+
+        // Função para rastrear o tempo no site quando o usuário sai da página
+        window.onbeforeunload = function() {
+            const entranceTime = parseInt(getCookie("entranceTime")); // Obtém o horário de entrada do cookie
+            const exitTime = new Date().getTime(); // Obtém o horário de saída em milissegundos
+            const timeSpent = (exitTime - entranceTime) / 1000; // Calcula o tempo gasto em segundos
+            alert("Você passou " + timeSpent + " segundos neste site."); // Exibe o tempo gasto
+        };
+
+        // Função para obter um cookie pelo nome
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for(let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        // Função para definir informações do visitante
+        function setVisitorInfo() {
+            setEntranceTime(); // Define o horário de entrada
+            const deviceInfo = navigator.userAgent; // Obtém informações sobre o dispositivo
+            const locationInfo = "Latitude: " + navigator.geolocation.latitude + ", Longitude: " + navigator.geolocation.longitude; // Obtém informações sobre a localização (latitude e longitude)
+            
+            // Define os cookies com as informações do visitante
+            document.cookie = "deviceInfo=" + deviceInfo + ";";
+            document.cookie = "locationInfo=" + locationInfo + ";";
+
+            alert("Informações do visitante definidas:\n\nDispositivo: " + deviceInfo + "\nLocalização: " + locationInfo);
+            document.getElementById("cookieBanner").style.display = "block"; // Exibe o banner de cookie
+
+            // Armazenar localmente sem mostrar
+            localStorage.setItem("deviceInfo", deviceInfo);
+            localStorage.setItem("locationInfo", locationInfo);
+            localStorage.setItem("entranceTime", new Date().getTime());
+        }
+
+        // Função para aceitar os cookies (ocultar o banner) e definir as informações do visitante
+        function acceptCookies() {
+            setVisitorInfo(); // Define as informações do visitante
+            document.getElementById("cookieBanner").style.display = "none"; // Oculta o banner de cookie
+        }
+    </script>
+</body>
+</html>

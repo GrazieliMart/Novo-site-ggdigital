@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigado - GGDIGITAL</title>
+    <link rel="stylesheet" href="contato.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="icon" type="image/png" href="logo.png" sizes="32x32">
+    <style>
+      body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #0A0E12;
+}
+   
+        h1 {
+    margin-bottom: -20px;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    opacity: 0; /* Definir a opacidade inicial como 0 */
+    animation: fadeIn 2s forwards; /* Aplicar a animação fadeIn */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+p{
+    color: #aaa;
+    font-size: 25px;
+}
+.line2 i{
+font-size: 35px;
+padding: 10px;
+transition: 0.3s;
+text-align: center;
+color: #fff;
+}
+.line2 i:hover{
+color:#19dfff;
+transition:0.3s;
+    
+}
+.texto-entrada {
+    text-align: center;
+    margin-top: 200px;
+    display: flex; /* Adiciona flexbox para centralizar os elementos */
+    flex-direction: column; /* Alinha os elementos na vertical */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+}
+.texto-entrada img{
+    width:200px;
+}
+a{
+    color:#fff;
+    text-decoration: none;
+}
+a:hover{
+    color:#19dfff;
+transition:0.3s;
+    text-decoration: underline;
+}
+.animated-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 16px 36px;
+    border: 4px solid;
+    border-color: transparent;
+    font-size: 15px;
+    background-color: #28313A ;
+    border-radius: 100px;
+   text-decoration: none;
+    font-weight: 600;
+    width: 220px;
+    color: #fff;
+    border-radius:10px;
+    box-shadow: 0 0 0 2px #28313A;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button svg {
+    position: absolute;
+    width: 24px;
+    fill: #000000;
+    background-color: #17D5ff;
+    border-radius: 10px;
+    z-index: 9;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button .arr-1 {
+    right: 16px;
+  }
+  
+  .animated-button .arr-2 {
+    left: -20%;
+  }
+  
+  .animated-button .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: #17D5ff;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button .text {
+    position: relative;
+    z-index: 1;
+    transform: translateX(-12px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button:hover {
+    box-shadow: 0 0 0 12px transparent;
+    color: #212121;
+    border-radius: 12px;
+    font-size: 15px;
+    padding-left:30px;
+  }
+  
+  .animated-button:hover .arr-1 {
+    right: -25%;
+  }
+  
+  .animated-button:hover .arr-2 {
+    left: 10px;
+  }
+  
+  .animated-button:hover .text {
+    transform: translateX(12px);
+  }
+  
+  .animated-button:hover svg {
+    fill: #212121;
+    background-color: #1b99b6;
+    border-radius: 10px;
+  }
+  
+  .animated-button:active {
+    scale: 0.95;
+    box-shadow: 0 0 0 4px #1b99b6;
+  }
+  
+  .animated-button:hover .circle {
+    width: 220px;
+    height: 220px;
+    opacity: 1;
+  }
+  @media screen and (max-width: 768px){
+.texto-entrada {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1 {
+    margin-bottom: -10px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}p {
+    color: #fff;
+    font-size: 20px;
+    padding-bottom: 40px;
+}
+}
+
+    </style>
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '917133843476792');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=917133843476792&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+<body>
+    <div class="texto-entrada">
+    <img id="logo" src="assets/logo.png" alt="Logo" >
+    <h1>Obrigado por preencher o formulário!</h1>
+    <p>Você acabou de concluir a <b>primeira etapa</b> para alcançar o <br>sucesso em Marketing Digital do seu Projeto.<br><b>Fique atento! </b>Entraremos em contato em breve. </p>
+    <div class="line2"> 
+                   <a href="https://www.instagram.com/_ggdigital/"> <i class="bi bi-instagram"></i></a>
+                  <a href="https://api.whatsapp.com/send/?phone=5511989467375&text&type=phone_number&app_absent=0"> <i class="bi bi-whatsapp"></i></a>
+                   <a href="https://www.linkedin.com/company/gg-digital-marketing-enterprising/about/"> <i class="bi bi-linkedin"></i></a></div>
+                   <br> 
+                   <a href="index.html" class="scroll-link">
+                    <button class="animated-button">
+                        <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                        </svg>
+                        <span class="text">Voltar ao Site</span>
+                        <span class="circle"></span>
+                        <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                        </svg>
+                    </button>
+                </a>
+              </div>
+             
+    </div>
+    
+</body>
+</html>
