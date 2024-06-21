@@ -244,16 +244,27 @@ body {
     height: 750px;
     background-image: url('../assets/formimg.png');
     /* Adicione outras propriedades de estilo conforme necessário */
-  }
+  }/* Estilos específicos para dispositivos iOS */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    /* Exemplo de seletor específico para iOS */
+    .ios-button {
+        /* Estilos para corrigir problemas específicos no iOS */
+        color: #000 !important; /* Cor da fonte preta */
+        /* Outros estilos necessários */
+    }
+}
+
  
-  .contactbutton{
+  .contactbutton {
     background-color: #fff;
     padding: 15px;
-    border-radius: 5px;width: 220px;
+    border-radius: 5px;
+    width: 220px;
+    color: #000;
     font-size: 15px;
     border: none;
     font-weight: bold;
-  }
+}
   .contactbutton:hover{
     background-color: #000000;
     color: #fff;

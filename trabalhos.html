@@ -318,26 +318,31 @@
         </div>
         
         <script>
-            document.addEventListener('scroll', function() {
-                var imagesContainer = document.querySelector('#trafego-pago .images-container');
-                var imagesTrafego = document.querySelector('#trafego-pago .images-trafego');
-                var scrollPosition = window.scrollY;
-                var containerOffsetTop = imagesContainer.offsetTop;
-                var containerHeight = imagesContainer.clientHeight;
-                var imagesHeight = imagesTrafego.clientHeight - window.innerHeight;
-                var servicesSection = document.getElementById('text-portifolio');
-                var servicesSectionTop = servicesSection.offsetTop;
-                var servicesSectionHeight = servicesSection.clientHeight;
-        
-                if (scrollPosition >= containerOffsetTop && scrollPosition <= containerOffsetTop + imagesHeight) {
-                    var translateY = (scrollPosition - containerOffsetTop) * 2; // Ajuste o multiplicador para aumentar a velocidade
-                    imagesTrafego.style.transform = 'translateY(' + (-translateY) + 'px)';
-                } else if (scrollPosition > containerOffsetTop + imagesHeight && scrollPosition < servicesSectionTop + servicesSectionHeight) {
-                    imagesTrafego.style.transform = 'translateY(' + (-imagesHeight) + 'px)';
-                } else {
-                    imagesTrafego.style.transform = 'translateY(0)';
-                }
-            });
+         document.addEventListener('scroll', function() {
+    // Verifica se a largura da tela é maior que 768 pixels (ajuste conforme necessário)
+    if (window.innerWidth > 768) {
+        // Coloque seu código existente aqui
+        var imagesContainer = document.querySelector('#trafego-pago .images-container');
+        var imagesTrafego = document.querySelector('#trafego-pago .images-trafego');
+        var scrollPosition = window.scrollY;
+        var containerOffsetTop = imagesContainer.offsetTop;
+        var containerHeight = imagesContainer.clientHeight;
+        var imagesHeight = imagesTrafego.clientHeight - window.innerHeight;
+        var servicesSection = document.getElementById('text-portifolio');
+        var servicesSectionTop = servicesSection.offsetTop;
+        var servicesSectionHeight = servicesSection.clientHeight;
+
+        if (scrollPosition >= containerOffsetTop && scrollPosition <= containerOffsetTop + imagesHeight) {
+            var translateY = (scrollPosition - containerOffsetTop) * 2; // Ajuste o multiplicador para aumentar a velocidade
+            imagesTrafego.style.transform = 'translateY(' + (-translateY) + 'px)';
+        } else if (scrollPosition > containerOffsetTop + imagesHeight && scrollPosition < servicesSectionTop + servicesSectionHeight) {
+            imagesTrafego.style.transform = 'translateY(' + (-imagesHeight) + 'px)';
+        } else {
+            imagesTrafego.style.transform = 'translateY(0)';
+        }
+    }
+});
+
         </script>
         
         
@@ -646,26 +651,30 @@
             </div>
         </div>
         <script>
-            document.addEventListener('scroll', function() {
-                var imagesContainer = document.querySelector('#site .images-container');
-                var imagesSite = document.querySelector('#site .images-site');
-                var scrollPosition = window.scrollY;
-                var containerOffsetTop = imagesContainer.offsetTop;
-                var containerHeight = imagesContainer.clientHeight;
-                var imagesHeight = imagesSite.clientHeight - window.innerHeight;
-                var servicesSection = document.getElementById('text-portifolio');
-                var servicesSectionTop = servicesSection.offsetTop;
-                var servicesSectionHeight = servicesSection.clientHeight;
-        
-                if (scrollPosition >= containerOffsetTop && scrollPosition <= containerOffsetTop + imagesHeight) {
-                    var translateY = (scrollPosition - containerOffsetTop) * 2; // Ajuste o multiplicador para aumentar a velocidade
-                    imagesSite.style.transform = 'translateY(' + (-translateY) + 'px)';
-                } else if (scrollPosition > containerOffsetTop + imagesHeight && scrollPosition < servicesSectionTop + servicesSectionHeight) {
-                    imagesSite.style.transform = 'translateY(' + (-imagesHeight) + 'px)';
-                } else {
-                    imagesSite.style.transform = 'translateY(0)';
-                }
-            });
+           // Segundo script
+document.addEventListener('scroll', function() {
+    if (window.innerWidth > 768) {
+        var imagesContainer = document.querySelector('#site .images-container');
+        var imagesSite = document.querySelector('#site .images-site');
+        var scrollPosition = window.scrollY;
+        var containerOffsetTop = imagesContainer.offsetTop;
+        var containerHeight = imagesContainer.clientHeight;
+        var imagesHeight = imagesSite.clientHeight - window.innerHeight;
+        var servicesSection = document.getElementById('text-portifolio');
+        var servicesSectionTop = servicesSection.offsetTop;
+        var servicesSectionHeight = servicesSection.clientHeight;
+
+        if (scrollPosition >= containerOffsetTop && scrollPosition <= containerOffsetTop + imagesHeight) {
+            var translateY = (scrollPosition - containerOffsetTop) * 2; // Ajuste o multiplicador para aumentar a velocidade
+            imagesSite.style.transform = 'translateY(' + (-translateY) + 'px)';
+        } else if (scrollPosition > containerOffsetTop + imagesHeight && scrollPosition < servicesSectionTop + servicesSectionHeight) {
+            imagesSite.style.transform = 'translateY(' + (-imagesHeight) + 'px)';
+        } else {
+            imagesSite.style.transform = 'translateY(0)';
+        }
+    }
+});
+
         </script>
         
    
@@ -885,26 +894,28 @@
 </div>
 
    <script>
-            document.addEventListener('scroll', function() {
-                var imagesContainer = document.querySelector('#identidade-visual .images-container');
-                var imagesidentidadevisual = document.querySelector('#identidade-visual .images-identidadevisual');
-                var scrollPosition = window.scrollY;
-                var containerOffsetTop = imagesContainer.offsetTop;
-                var containerHeight = imagesContainer.clientHeight;
-                var imagesHeight = imagesidentidadevisual.clientHeight - window.innerHeight;
-                var servicesSection = document.getElementById('text-portifolio');
-                var servicesSectionTop = servicesSection.offsetTop;
-                var servicesSectionHeight = servicesSection.clientHeight;
-        
-                if (scrollPosition >= containerOffsetTop && scrollPosition <= containerOffsetTop + imagesHeight) {
-                    var translateY = (scrollPosition - containerOffsetTop) * 2; // Ajuste o multiplicador para aumentar a velocidade
-                    imagesidentidadevisual.style.transform = 'translateY(' + (-translateY) + 'px)';
-                } else if (scrollPosition > containerOffsetTop + imagesHeight && scrollPosition < servicesSectionTop + servicesSectionHeight) {
-                    imagesidentidadevisual.style.transform = 'translateY(' + (-imagesHeight) + 'px)';
-                } else {
-                    imagesSite.style.transform = 'translateY(0)';
-                }
-            });
+         document.addEventListener('scroll', function() {
+    if (window.innerWidth > 768) {
+        var imagesContainer = document.querySelector('#identidade-visual .images-container');
+        var imagesidentidadevisual = document.querySelector('#identidade-visual .images-identidadevisual');
+        var scrollPosition = window.scrollY;
+        var containerOffsetTop = imagesContainer.offsetTop;
+        var containerHeight = imagesContainer.clientHeight;
+        var imagesHeight = imagesidentidadevisual.clientHeight - window.innerHeight;
+        var servicesSection = document.getElementById('text-portifolio');
+        var servicesSectionTop = servicesSection.offsetTop;
+        var servicesSectionHeight = servicesSection.clientHeight;
+
+        if (scrollPosition >= containerOffsetTop && scrollPosition <= containerOffsetTop + imagesHeight) {
+            var translateY = (scrollPosition - containerOffsetTop) * 2; // Ajuste o multiplicador para aumentar a velocidade
+            imagesidentidadevisual.style.transform = 'translateY(' + (-translateY) + 'px)';
+        } else if (scrollPosition > containerOffsetTop + imagesHeight && scrollPosition < servicesSectionTop + servicesSectionHeight) {
+            imagesidentidadevisual.style.transform = 'translateY(' + (-imagesHeight) + 'px)';
+        } else {
+            imagesidentidadevisual.style.transform = 'translateY(0)';
+        }
+    }
+});
         </script>
 <div class="portifolio" id="identidade-visual">
     <div class="container-flex">
