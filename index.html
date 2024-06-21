@@ -18,7 +18,11 @@
     justify-content: center;
     padding: 20px;
     margin-top: 20px;
+}.parallax {
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
 }
+
 .goog-te-combo, .VIpgJd-ZVi9od-ORHb *, .VIpgJd-ZVi9od-SmfZ *, .VIpgJd-ZVi9od-xl07Ob *, .VIpgJd-ZVi9od-vH1Gmf *, .VIpgJd-ZVi9od-l9xktf * {
     font-family: arial;
     font-size: 10pt;
@@ -121,7 +125,7 @@
     <div class="centralize-container" id="topo">
         <div class="texto-entrada" >
             <div class="video-section">
-                <video autoplay muted loop width="100%">
+                <video autoplay width="100%" autoplay muted playsinline>
                     <source src="assets/brversion.mp4" type="video/mp4">
                     Seu navegador não suporta o elemento de vídeo.
                 </video>
