@@ -56,95 +56,66 @@
 </head>
 
 <header>
-  
-
-    <nav  class="scrolling-nav">
-   <div class="mobile-menu-icon">
-  <div class="bar"></div>
-  <div class="bar"></div>
-  <div class="bar"></div>
-</div>
-<div class="mobile-nav" id="mobileNav">
-    <a href="index.html">home</a>
-   
-    <a href="sobre.html">sobre nós</a>
-    <a href="contato.html">contato</a>
-    <a href="trabalhos.html" id="contato">trabalhos</a>
- 
-</div>
+    <nav class="scrolling-nav">
+        <div class="mobile-menu-icon" id="mobileMenuIcon">
+            <img id="menuIconImg" src="assets/menu.png" alt="Menu Icon">
+        </div>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="index.html">home</a>
+            <a href="sobre.html">sobre nós</a>
+            <a href="contato.html">contato</a>
+            <a href="trabalhos.html" id="contato">serviços</a>
+        </div>
         <img id="logo" src="assets/logo1.png" alt="Logo">
-
         <div class="sociallinks">
-        <a href="index.html"  >home</a>
-        <a href="sobre.html" >sobre nós</a>
-        <a href="contato.html" id="contato">contato</a>
-        <a href="trabalhos.html" id="contato">trabalhos</a>
-      
-       </div>
-       <div class="redessociais">
-  <a href="https://api.whatsapp.com/send/?phone=5511989467375&text&type=phone_number&app_absent=0" id="whatsappIconNavBar"><i class="bi bi-whatsapp"></i></a>
-  <a href="https://www.linkedin.com/company/gg-digital-marketing/" id="whatsappIconNavBar"><i class="bi bi-linkedin"></i></a>
-  <a href="https://www.instagram.com/_ggdigital/" id="whatsappIconNavBar"><i class="bi bi-instagram"></i></a>
-   </div>
-
-   <div class="idioma">
-    <div class="bandeiras-brasil">
-        <img src="assets/brasil.png" alt="Português" id="brFlag">
-    </div>
-    <div class="bandeiras-inglaterra">
-        <img src="assets/ingleterra.png" alt="English" id="enFlag">
-    </div>
-    <div class="bandeiras-alemanha">
-        <img src="assets/alemanha.jpg" alt="Deutsch" id="deFlag">
-    </div>
-
-    <div id="google_translate_element"></div>
-  
-   
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({pageLanguage: 'pt', includedLanguages: 'en,de,pt', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-        }
-
-        function triggerGoogleTranslate(lang) {
-            var frame = document.querySelector('.goog-te-menu-frame');
-            if (!frame) {
-                alert("Error: Google Translate frame not found.");
-                return;
-            }
-            var googleTranslateFrame = frame.contentWindow.document;
-            googleTranslateFrame.querySelector(`.goog-te-menu2-item span.text:contains("${lang}")`).click();
-        }
-
-        document.getElementById('brFlag').addEventListener('click', function() {
-            triggerGoogleTranslate('Portuguese');
-        });
-        document.getElementById('enFlag').addEventListener('click', function() {
-            triggerGoogleTranslate('English');
-        });
-        document.getElementById('deFlag').addEventListener('click', function() {
-            triggerGoogleTranslate('German');
-        });
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-</div>
-<script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-  
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-  </script>
-  
-
-</nav>
+            <a href="index.html">home</a>
+            <a href="sobre.html">sobre nós</a>
+            <a href="contato.html" id="contato">contato</a>
+            <a href="trabalhos.html" id="contato">serviços</a>
+        </div>
+        <div class="redessociais">
+            <a href="https://api.whatsapp.com/send/?phone=5511989467375&text&type=phone_number&app_absent=0" id="whatsappIconNavBar"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/company/gg-digital-marketing/" id="whatsappIconNavBar"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.instagram.com/_ggdigital/" id="whatsappIconNavBar"><i class="bi bi-instagram"></i></a>
+        </div>
+        <div class="idioma">
+            <div class="bandeiras-brasil">
+                <img src="assets/brasil.png" alt="Português" id="brFlag">
+            </div>
+        </div>
+    </nav>
 </header>
-
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const mobileMenuIcon = document.getElementById('mobileMenuIcon');
+        const mobileNav = document.getElementById('mobileNav');
+        const menuIconImg = document.getElementById('menuIconImg');
+    
+        // Set the initial state to closed
+        mobileNav.style.display = 'none';
+    
+        mobileMenuIcon.addEventListener('click', function () {
+            // Toggle the visibility of the mobile nav
+            if (mobileNav.style.display === 'flex') {
+                mobileNav.style.display = 'none';
+                menuIconImg.src = 'assets/menu.png';
+            } else {
+                mobileNav.style.display = 'flex';
+                menuIconImg.src = 'assets/close.png';
+            }
+        });
+    
+        // Add this event listener to hide the div when clicking outside
+        document.body.addEventListener('click', function (event) {
+            if (!mobileMenuIcon.contains(event.target) && !mobileNav.contains(event.target)) {
+                mobileNav.style.display = 'none';
+                menuIconImg.src = 'assets/menu.png';
+            }
+        });
+    });
+    
+    </script>
+    
 <body>
     
     <div class="centralize-container" id="topo">
@@ -178,7 +149,7 @@
                                 <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
                                 </svg>
-                                <span class="text">Ver Trabalhos</span>
+                                <span class="text">Ver serviços</span>
                                 <span class="circle"></span>
                                 <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
@@ -343,7 +314,7 @@
             <div class="fixed-portifolio">
             <p>
                 <b>Quer um site que realmente se destaque? </b><br>Na jornada para construir uma presença online impactante, é essencial ter os pilares certos. <br>Aqui na GG Digital, entendemos a importância de cada detalhe.
-<br><br>Confira nossos <b>trabalhos</b> abaixo
+<br><br>Confira nossos <b>serviços</b> abaixo
 
             </p>
             <div class="portifolio">
@@ -355,7 +326,7 @@
                  
                 </div>  
                 <div class="portifolio-btn">
-                <a href="trabalhos.html"><button class="contactbutton">Ver Trabalhos</button></a>
+                <a href="trabalhos.html"><button class="contactbutton">CONFERIR</button></a>
                 </div>
             </div></div>
         
@@ -541,7 +512,7 @@
     <div><h1>Empresas que confiaram na GG</h1></div>
      <div class="grupo-divs">
      <div class="empresa">
-         <img src="assets/empresas (1).png" alt="Empresa 1">
+         <img src="assets/logo-sara.png" alt="Empresa 1">
          
          
      </div>
@@ -569,34 +540,24 @@
         
      </div>
      <div class="empresa">
-         <img src="assets/empresas (8).png" alt="Empresa 3">
+         <img src="assets/empresas (11).png" alt="Empresa 3">
         
      </div>
      <div class="empresa">
          <img src="assets/empresas (4).png" alt="Empresa 3">
         
-     </div>
- </div>
- <div class="grupo-divs">
-     
-    <div class="empresa">
+     </div>  <div class="empresa">
         <img src="assets/empresas (9).png" alt="Empresa 4">
 
     </div>
-    <div class="empresa">
-        <img src="assets/empresas (10).png" alt="Empresa 3">
-       
-    </div>
-    <div class="empresa">
-        <img src="assets/logo-sara.png" alt="Empresa 3">
-       
-    </div>
-    <div class="empresa">
-        <img src="assets/empresas (11).png" alt="Empresa 3">
-       
-    </div>
+ </div>
+ <div class="grupo-divs">
+     
+  
+   
 </div>
  </div>
+ 
  
  
 
@@ -737,32 +698,6 @@
       return true;
   }
 });</script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-      const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
-      const mobileNav = document.getElementById('mobileNav');
-
-      // Set the initial state to closed
-      mobileNav.style.display = 'none';
-
-      mobileMenuIcon.addEventListener('click', function () {
-          // Toggle the visibility using display: flex and display: none
-          if (mobileNav.style.display === 'flex') {
-              mobileNav.style.display = 'none';
-          } else {
-              mobileNav.style.display = 'flex';
-          }
-      });
-
-      // Add this event listener to hide the div when clicking outside
-      document.body.addEventListener('click', function (event) {
-          if (!mobileMenuIcon.contains(event.target) && !mobileNav.contains(event.target)) {
-              // Click is outside both the button and the div, hide the div
-              mobileNav.style.display = 'none';
-          }
-      });
-  });
-</script>
 
 
 

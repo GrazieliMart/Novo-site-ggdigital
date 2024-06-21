@@ -71,57 +71,65 @@
 </head>
 <body>
     <header>
-  
-
-        <nav  class="scrolling-nav">
-       <div class="mobile-menu-icon">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
-  
+        <nav class="scrolling-nav">
+            <div class="mobile-menu-icon" id="mobileMenuIcon">
+                <img id="menuIconImg" src="assets/menu.png" alt="Menu Icon">
+            </div>
+            <div class="mobile-nav" id="mobileNav">
+                <a href="index.html">home</a>
+                <a href="sobre.html">sobre nós</a>
+                <a href="contato.html">contato</a>
+                <a href="trabalhos.html" id="contato">serviços</a>
+            </div>
             <img id="logo" src="assets/logo1.png" alt="Logo">
-    
             <div class="sociallinks">
-            <a href="index.html"  >home</a>
-            <a href="sobre.html" >sobre nós</a>
-            <a href="contato.html" id="contato">contato</a>
-            <a href="trabalhos.html" id="contato">trabalhos</a>
-          
-           </div>
-           <div class="redessociais">
-      <a href="https://api.whatsapp.com/send/?phone=5511989467375&text&type=phone_number&app_absent=0" id="whatsappIconNavBar"><i class="bi bi-whatsapp"></i></a>
-      <a href="https://www.linkedin.com/company/gg-digital-marketing/" id="whatsappIconNavBar"><i class="bi bi-linkedin"></i></a>
-      <a href="https://www.instagram.com/_ggdigital/" id="whatsappIconNavBar"><i class="bi bi-instagram"></i></a>
-       </div>
-    
-       <div class="idioma">
-        <div class="bandeiras-brasil">
-            <img src="assets/brasil.png" alt="Português" id="brFlag">
-        </div>
-        <div class="bandeiras-inglaterra">
-            <img src="assets/ingleterra.png" alt="English" id="enFlag">
-        </div>
-        <div class="bandeiras-alemanha">
-            <img src="assets/alemanha.jpg" alt="Deutsch" id="deFlag">
-        </div>
-    </div>
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-          anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-      
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-              behavior: 'smooth'
-            });
-          });
-        });
-      </script>
-      
-    
-    </nav>
+                <a href="index.html">home</a>
+                <a href="sobre.html">sobre nós</a>
+                <a href="contato.html" id="contato">contato</a>
+                <a href="trabalhos.html" id="contato">serviços</a>
+            </div>
+            <div class="redessociais">
+                <a href="https://api.whatsapp.com/send/?phone=5511989467375&text&type=phone_number&app_absent=0" id="whatsappIconNavBar"><i class="bi bi-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/company/gg-digital-marketing/" id="whatsappIconNavBar"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.instagram.com/_ggdigital/" id="whatsappIconNavBar"><i class="bi bi-instagram"></i></a>
+            </div>
+            <div class="idioma">
+                <div class="bandeiras-brasil">
+                    <img src="assets/brasil.png" alt="Português" id="brFlag">
+                </div>
+            </div>
+        </nav>
     </header>
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuIcon = document.getElementById('mobileMenuIcon');
+            const mobileNav = document.getElementById('mobileNav');
+            const menuIconImg = document.getElementById('menuIconImg');
+        
+            // Set the initial state to closed
+            mobileNav.style.display = 'none';
+        
+            mobileMenuIcon.addEventListener('click', function () {
+                // Toggle the visibility of the mobile nav
+                if (mobileNav.style.display === 'flex') {
+                    mobileNav.style.display = 'none';
+                    menuIconImg.src = 'assets/menu.png';
+                } else {
+                    mobileNav.style.display = 'flex';
+                    menuIconImg.src = 'assets/close.png';
+                }
+            });
+        
+            // Add this event listener to hide the div when clicking outside
+            document.body.addEventListener('click', function (event) {
+                if (!mobileMenuIcon.contains(event.target) && !mobileNav.contains(event.target)) {
+                    mobileNav.style.display = 'none';
+                    menuIconImg.src = 'assets/menu.png';
+                }
+            });
+        });
+        
+        </script>
     <div class="container main" id="topo">
         <h2>Política de Privacidade</h2>
         <p>
@@ -234,32 +242,7 @@
         return true;
     }
 });</script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
-        const mobileNav = document.getElementById('mobileNav');
-
-        // Set the initial state to closed
-        mobileNav.style.display = 'none';
-
-        mobileMenuIcon.addEventListener('click', function () {
-            // Toggle the visibility using display: flex and display: none
-            if (mobileNav.style.display === 'flex') {
-                mobileNav.style.display = 'none';
-            } else {
-                mobileNav.style.display = 'flex';
-            }
-        });
-
-        // Add this event listener to hide the div when clicking outside
-        document.body.addEventListener('click', function (event) {
-            if (!mobileMenuIcon.contains(event.target) && !mobileNav.contains(event.target)) {
-                // Click is outside both the button and the div, hide the div
-                mobileNav.style.display = 'none';
-            }
-        });
-    });
-</script>
+ 
 
 
 
@@ -294,5 +277,7 @@
         });
     });
 </script>
+
+
 </body>
 </html>

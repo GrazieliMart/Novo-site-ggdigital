@@ -32,7 +32,55 @@ nav a:hover {
 .redessociais a:hover{
     transform: scale(1.1);
 
+}.mobile-menu-icon {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: 15px; /* Adjust as needed */
+  position: relative;
+  z-index: 1000;
 }
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #fff; /* Adjust as needed */
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.mobile-menu-icon img{
+  height: 30px;width: 30px;
+}
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  background-color: #28313a;
+  width: 100%;
+  text-align: left;
+}
+
+.mobile-nav a {
+  color: #19dfff;
+  padding: 15px;
+  text-decoration: none;
+  display: block;
+}
+
 .scrolling-nav {
     width: 100%;
     background-color: #17191c;
@@ -106,13 +154,13 @@ nav {
   .animated-button .text {
     position: relative;
     z-index: 1;
-    font-size: 20px;
+
     transform: translateX(-12px);
     transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
   .animated-button:hover {
     box-shadow: 0 0 0 12px transparent;
-    color: #ffffff;
+    color: #fff;
     border-radius: 12px;
     font-size: 15px;
     padding-left:30px;
@@ -155,6 +203,7 @@ nav {
 #logo img{
     height: 50px;
 }
+
 .idioma {
     display: flex;
     align-items: center;
@@ -163,6 +212,7 @@ nav {
     gap: 25px;
     border-radius: 35px;
 }
+
 .idioma img {
     width: 24px;
     height: 14px;
@@ -173,7 +223,7 @@ nav {
     transition: 0.2s;
 }
 .bandeiras-brasil{
-    margin-right: -15px;
+    margin-right: 0px;
 }
 .bandeiras-inglaterra{
     margin-right: -15px;
