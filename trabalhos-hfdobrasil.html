@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GGDIGITAL Gestão de Marketing Especializado</title>
+    <title>GG DIGITAL Gestão de Marketing Especializado - Ads Onlie - Tráfego Pago - Sites Online - Gestão de Mídias</title>
     <link rel="stylesheet" href="css/colors.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/mobile.css">
@@ -43,8 +43,11 @@
 </script>
 </head>
 
+
+
 <header>
     <nav class="scrolling-nav">
+        <div class="faixa-div">Digitalizar: Comece agora mesmo entrando em contato conosco. <a href="contato.html">Começar agora</a></div>
         <div class="mobile-menu-icon" id="mobileMenuIcon">
             <img id="menuIconImg" src="assets/menu.png" alt="Menu Icon">
         </div>
@@ -52,14 +55,32 @@
             <a href="index.html">home</a>
             <a href="sobre.html">sobre nós</a>
             <a href="contato.html">contato</a>
-            <a href="trabalhos.html" id="contato">serviços</a>
+            <div class="dropdown">
+                <a href="#" id="servicos">serviços</a>
+                <div class="dropdown-content">
+                    <a href="trafego-pago.html"><span><img src="assets/crm.png" alt="Ícone Tráfego Pago"></span> tráfego pago</a>
+                    <a href="websites.html"><span><img src="assets/dev.png" alt="Ícone Websites"></span> websites</a>
+                    <a href="identidade-visual.html"><span><img src="assets/estrategia.png" alt="Ícone Identidade Visual"></span> identidade visual</a>
+                    <a href="gestao-midias.html"><span><img src="assets/ads.png" alt="Ícone Gestão de Mídias"></span> gestão de mídias</a>
+                </div>
+            </div>
+            <a href="trabalhos.html" id="contato">portifolio</a>
         </div>
         <img id="logo" src="assets/logo1.png" alt="Logo">
         <div class="sociallinks">
             <a href="index.html">home</a>
             <a href="sobre.html">sobre nós</a>
             <a href="contato.html" id="contato">contato</a>
-            <a href="trabalhos.html" id="contato">serviços</a>
+            <div class="dropdown">
+                <a href="#" id="servicos">serviços</a> <!-- Link sem destino -->
+                <div class="dropdown-content">
+                    <a href="trafego-pago.html"><span><img src="assets/crm.png" alt="Ícone Tráfego Pago"></span> tráfego pago</a>
+                    <a href="websites.html"><span><img src="assets/dev.png" alt="Ícone Websites"></span> websites</a>
+                    <a href="identidade-visual.html"><span><img src="assets/estrategia.png" alt="Ícone Identidade Visual"></span> identidade visual</a>
+                    <a href="gestao-midias.html"><span><img src="assets/ads.png" alt="Ícone Gestão de Mídias"></span> gestão de mídias</a>
+                </div>
+            </div>
+            <a href="trabalhos.html" id="contato">portifolio</a>
         </div>
         <div class="redessociais">
             <a href="https://api.whatsapp.com/send/?phone=5511989467375&text&type=phone_number&app_absent=0" id="whatsappIconNavBar"><i class="bi bi-whatsapp"></i></a>
@@ -72,7 +93,52 @@
             </div>
         </div>
     </nav>
+    <script>// JavaScript para controlar o dropdown em dispositivos móveis
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdownToggles = document.querySelectorAll('.mobile-nav .dropdown > a');
+        
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const parentDropdown = this.parentElement;
+                    parentDropdown.classList.toggle('active');
+                });
+            });
+        });
+        </script>
 </header>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const mobileMenuIcon = document.getElementById('mobileMenuIcon');
+        const mobileNav = document.getElementById('mobileNav');
+        const menuIconImg = document.getElementById('menuIconImg');
+    
+        // Set the initial state to closed
+        mobileNav.style.display = 'none';
+    
+        mobileMenuIcon.addEventListener('click', function () {
+            // Toggle the visibility of the mobile nav
+            if (mobileNav.style.display === 'flex') {
+                mobileNav.style.display = 'none';
+                menuIconImg.src = 'assets/menu.png';
+            } else {
+                mobileNav.style.display = 'flex';
+                menuIconImg.src = 'assets/close.png';
+            }
+        });
+    
+        // Add this event listener to hide the div when clicking outside
+        document.body.addEventListener('click', function (event) {
+            if (!mobileMenuIcon.contains(event.target) && !mobileNav.contains(event.target)) {
+                mobileNav.style.display = 'none';
+                menuIconImg.src = 'assets/menu.png';
+            }
+        });
+    });
+    
+    </script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const mobileMenuIcon = document.getElementById('mobileMenuIcon');

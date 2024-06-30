@@ -236,9 +236,11 @@
   }
   .filter-container {
     text-align: center;
-    margin: 20px 0;
+    display: ruby;
+    top: 10%;
+    margin-top: 200px;
+    top: 1;
 }
-
 .filter-btn {
     background-color: #fff;
     border: none;
@@ -537,9 +539,9 @@
   padding: 20px;
 }
 .trafego-pago-container {
-  display: block;
+  display: ruby;
   border: navajowhite;
-  padding: 20px;
+  padding: 0px;
   padding-top: 90px;
   font-size: 13px;
   background-color: #fff0;

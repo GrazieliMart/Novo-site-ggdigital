@@ -8,7 +8,74 @@ body {
      overflow-x: hidden;
      margin: 0;
     background-color: #0A0E12;
-}.contact-form {
+}
+
+  
+  
+  .container-laptop {
+    position: relative;
+    width: 100%;
+    height: 1500px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0.5);
+    opacity: 0.5;
+    transition: transform 0.1s, opacity 0.1s;
+}
+#div-icons-paralla{
+    height: 1500px;
+    padding: 0px;
+}
+.container-laptop .laptop-img {
+    position: absolute;
+    width: auto;
+    z-index: 1;
+}
+
+.container-laptop .video {
+    position: absolute;
+    width: 57%;
+    top: 22%;
+    right: 22%;
+    z-index: 2;
+    transition: width 0.1s, opacity 0.1s;
+}
+
+@media only screen and (max-width: 768px) {
+    .container-laptop .laptop-img {
+        width: 80%;
+        height: auto;
+    }
+    .container-laptop .video {
+        position: absolute;
+        width: 57%;
+        top: 35%;
+        right: 21%;
+        z-index: 2;
+        transition: width 0.1s, opacity 0.1s;
+    }
+    .container-laptop {
+        position: relative;
+        width: 100%;
+        height: 600px;
+        overflow: hidden;
+        display: flex;
+        margin-top: 50px;
+        align-items: center;
+        justify-content: center;
+         transform:none; 
+        opacity: 01.5; 
+         transition: none; 
+    }
+    #div-icons-paralla{
+        height: 700px;
+        padding: 0px;
+    }
+}
+
+.contact-form {
     width: 100%;
     justify-content: center;
 }.parallax {
@@ -643,7 +710,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 100px;
+
   
   
 }
@@ -959,24 +1026,108 @@ html {
     width: 100%;
     height: auto;
 }
+.video-section {
+    position: relative;
+}
 
+.video-section video {
+    z-index: 1;
+}
+
+
+.content2{
+    width: 100%;
+}
+.top-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    top: 170px;
+    width: 100%;
+}
+.column-custom a {
+    position: relative;
+    display: block;
+}
+
+.column-custom img {
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.pop-out:hover {
+    transform: scale(1.2);
+    transform: 0.3s;
+}
+
+.rotate:hover {
+    transform: rotate(360deg);
+}
+.video-container {
+    position: relative;
+    display: block;
+}
+
+.hover-trigger {
+    display: block;
+   
+}
+
+.hover-video {
+    position: absolute;
+    top: 0;
+    left: -110px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+   
+}
+
+.video-container:hover .hover-trigger {
+    opacity: 0;
+}
+
+.video-container:hover .hover-video {
+    opacity: 1;
+}
+
+
+
+
+.top-button {
+    background-color: #19dfff;
+    color: #fff;
+    border: none;
+    margin-top: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 50px;
+}
+
+.top-button:hover {
+    background-color: #444;
+}
 
 .content {
     position: absolute;
-    top: 70%;
+    top: 50%;
     left: 5%;
     width: 500px;
     z-index: 10;
     color: #ffffff;
 }
-.content img{
-    width: 265px;
-   
-    font-weight: 900;
-}
-.content h2{
+
+.content h2 {
+    color: #0f0d0d;
     margin-top: -15px;
+    margin-bottom: 6px;
+    font-size: 65px;
+    font-family: system-ui;
+    line-height: 0.9;
 }
+
 .content #span{
     color: #17D5ff;
 }
@@ -1011,6 +1162,7 @@ html {
     height: 250px; /* Altura desejada para as divs parallax */
     padding: 50px;
 }
+
 .container-portfolio {
     display: flex;
   
@@ -1129,19 +1281,20 @@ align-items: center;
 padding: 250px;
 display: flex;
 }.tooltip-container {
-position: relative;
-background: var(--background);
-cursor: pointer;
-height: 200px;
-width: 290px;
-padding: 25px;
-transition: all 0.1s;
-background-color: #28313A;
-font-size: 17px;
-border-radius: 8px;
-box-shadow: none;
-margin-right: 80px;
-color: #fff;
+    position: relative;
+    background: var(--background);
+    cursor: pointer;
+    /* height: 200px; */
+    width: 290px;
+    padding: 25px;
+    transition: all 0.1s;
+    background-color: #28313A;
+    font-size: 17px;
+    border-radius: 8px;
+    box-shadow: none;
+    margin-right: 80px;
+    text-align: center;
+    color: #fff;
 }
 .tooltip {
 position: absolute;
@@ -1308,7 +1461,9 @@ width: 100%;
 flex-shrink: 0;
 margin-right: 55px;
 }
-
+#imagens-gg{
+    width: 240px;
+}
 
 @media screen and (max-width: 1040px) {
 .cads-gg {

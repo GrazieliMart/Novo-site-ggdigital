@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GGDIGITAL Gestão de Marketing Especializado</title>
+    <title>GG DIGITAL Gestão de Marketing Especializado - Ads Onlie - Tráfego Pago - Sites Online - Gestão de Mídias </title>
     <link rel="stylesheet" href="css/colors.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/mobile.css">
@@ -67,6 +67,7 @@
 
 <header>
     <nav class="scrolling-nav">
+        <div class="faixa-div">Digitalizar: Comece agora mesmo entrando em contato conosco. <a href="contato.html">Começar agora</a></div>
         <div class="mobile-menu-icon" id="mobileMenuIcon">
             <img id="menuIconImg" src="assets/menu.png" alt="Menu Icon">
         </div>
@@ -74,14 +75,32 @@
             <a href="index.html">home</a>
             <a href="sobre.html">sobre nós</a>
             <a href="contato.html">contato</a>
-            <a href="trabalhos.html" id="contato">serviços</a>
+            <div class="dropdown">
+                <a href="#" id="servicos">serviços</a>
+                <div class="dropdown-content">
+                    <a href="trafego-pago.html"><span><img src="assets/crm.png" alt="Ícone Tráfego Pago"></span> tráfego pago</a>
+                    <a href="websites.html"><span><img src="assets/dev.png" alt="Ícone Websites"></span> websites</a>
+                    <a href="identidade-visual.html"><span><img src="assets/estrategia.png" alt="Ícone Identidade Visual"></span> identidade visual</a>
+                    <a href="gestao-midias.html"><span><img src="assets/ads.png" alt="Ícone Gestão de Mídias"></span> gestão de mídias</a>
+                </div>
+            </div>
+            <a href="trabalhos.html" id="contato">portifolio</a>
         </div>
         <img id="logo" src="assets/logo1.png" alt="Logo">
         <div class="sociallinks">
             <a href="index.html">home</a>
             <a href="sobre.html">sobre nós</a>
             <a href="contato.html" id="contato">contato</a>
-            <a href="trabalhos.html" id="contato">serviços</a>
+            <div class="dropdown">
+                <a href="#" id="servicos">serviços</a> <!-- Link sem destino -->
+                <div class="dropdown-content">
+                    <a href="trafego-pago.html"><span><img src="assets/crm.png" alt="Ícone Tráfego Pago"></span> tráfego pago</a>
+                    <a href="websites.html"><span><img src="assets/dev.png" alt="Ícone Websites"></span> websites</a>
+                    <a href="identidade-visual.html"><span><img src="assets/estrategia.png" alt="Ícone Identidade Visual"></span> identidade visual</a>
+                    <a href="gestao-midias.html"><span><img src="assets/ads.png" alt="Ícone Gestão de Mídias"></span> gestão de mídias</a>
+                </div>
+            </div>
+            <a href="trabalhos.html" id="contato">portifolio</a>
         </div>
         <div class="redessociais">
             <a href="https://api.whatsapp.com/send/?phone=5511989467375&text&type=phone_number&app_absent=0" id="whatsappIconNavBar"><i class="bi bi-whatsapp"></i></a>
@@ -94,7 +113,22 @@
             </div>
         </div>
     </nav>
+    <script>// JavaScript para controlar o dropdown em dispositivos móveis
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdownToggles = document.querySelectorAll('.mobile-nav .dropdown > a');
+        
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const parentDropdown = this.parentElement;
+                    parentDropdown.classList.toggle('active');
+                });
+            });
+        });
+        </script>
 </header>
+
+
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const mobileMenuIcon = document.getElementById('mobileMenuIcon');
@@ -126,83 +160,121 @@
     
     </script>
     
-<body>
+<body> 
     
-    <div class="centralize-container" id="topo">
-        <div class="texto-entrada" >
+ 
+
+    
+  
+    
+    <div class="centralize-container" id="topo" >
+        <div class="texto-entrada">
             <div class="video-section">
-                <video autoplay  autoplay muted playsinline width="100%">
+                <video loop autoplay muted playsinline width="100%">
                     <source src="assets/brversion.mp4" type="video/mp4">
                     Seu navegador não suporta o elemento de vídeo.
                 </video>
                 <div class="content">
-                  <img src="assets/ggdigital.png" alt="">
-                    <H2>Tudo o que você precisa para crescer no digital, em um só lugar.</H2>
-                    
+     <div class="content2">
+                 </div>
+                   
+                    <h2 >Tudo o que você precisa, em um só lugar.</h2>
+    
+                 
+    
                     <div class="buttonsvideo">
                         <div>
-                    <a href="https://api.whatsapp.com/send/?phone=5511989467375&text&type=phone_number&app_absent=0" id="saibaMaisBtn">
-                        <button class="animated-button">
-                            <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-                            </svg>
-                            <span class="text">Contratar</span>
-                            <span class="circle"></span>
-                            <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-                            </svg>
-                        </button>
-                    </a></div>
-                    <div>
-                        <a href="trabalhos.html" id="saibaMaisBtn">
-                            <button class="animated-button">
-                                <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-                                </svg>
-                                <span class="text">Ver serviços</span>
-                                <span class="circle"></span>
-                                <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-                                </svg>
-                            </button>
-                        </a></div>
+                            <a href="contato.html" id="saibaMaisBtn">
+                                <button class="animated-button">
+                                    <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                                    </svg>
+                                    <span class="text">Contratar</span>
+                                    <span class="circle"></span>
+                                    <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                                    </svg>
+                                </button>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="trabalhos.html" id="saibaMaisBtn">
+                                <button class="animated-button">
+                                    <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                                    </svg>
+                                    <span class="text">Ver serviços</span>
+                                    <span class="circle"></span>
+                                    <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                                    </svg>
+                                </button>
+                            </a>
+                        </div>
+
+                    </div>
+                  
                 </div>
-
-
-
                 </div>
-            </div>
+            
         </div>
-    </div>
-
-
-    <div class="container-custom">
+    </div><script>document.addEventListener('DOMContentLoaded', function() {
+        const videoContainers = document.querySelectorAll('.video-container');
+    
+        videoContainers.forEach(container => {
+            const video = container.querySelector('.hover-video');
+            container.addEventListener('mouseover', () => {
+                video.play();
+            });
+    
+            container.addEventListener('mouseleave', () => {
+                video.pause();
+                video.currentTime = 0;
+            });
+        });
+    });
+    </script>
+ <div class="container-custom">
     <div class="column-custom aos-item" data-aos="fade-up">
-        <img src="assets/ads.png" alt="Imagem 1">
-        <h1>Ads</h1>
-        <p>Maximizamos o alcance online de campanhas de tráfego pago em todas as redes sociais.</p>
+        <a href="gestão-midias.html">
+            <img src="assets/ads.png" alt="Gestão de Mídia" class="pop-out">
+        </a>
+        <h1 style="font-size: 30px;">Gestão de Mídia</h1>
+        <p>Posts e Criativos para redes sociais com otimizações IA.</p>
+        <img src="assets/gestao-midia.png" alt="Imagem extra Gestão de Mídia" id="imagens-gg">
     </div>
 
     <div class="column-custom aos-item" data-aos="fade-up" data-aos-delay="100">
-        <img src="assets/estrategia.png" alt="Imagem 2">
-        <h1>Estratégia</h1>
-        <p>Análises diárias das campanhas e transparência com seus investimentos.</p>
+        <a href="trafego-pago.html">
+            <img src="assets/crm.png" alt="Imagem 4" class="rotate">
+        </a>
+        <h1 style="font-size: 30px;">Tráfego Pago</h1>
+        <p>Almente seu alcance de público. Meta Ads Pinterest Ads Google Analytics TikTok Ads</p>
+        <img src="assets/trafego-pago.png" alt="Imagem extra Tráfego Pago" id="imagens-gg">
     </div>
 
     <div class="column-custom aos-item" data-aos="fade-up" data-aos-delay="200">
-        <img src="assets/dev.png" alt="Imagem 3">
-        <h1>WebSites</h1>
+        <a href="websites.html" class="video-container">
+            <img src="assets/dev.png" alt="Imagem 3" class="hover-trigger">
+            <video src="assets/dev-video.mp4" loop muted class="hover-video"></video>
+        </a>
+        <h1 style="font-size: 30px;">WebSites</h1>
         <p>Divulgue, Personalize e esteja On. Sites otimizados e com ótimo desempenho web.</p>
+        <img src="assets/websites.png" alt="Imagem extra WebSites" id="imagens-gg">
     </div>
 
     <div class="column-custom aos-item" data-aos="fade-up" data-aos-delay="300">
-        <img src="assets/crm.png" alt="Imagem 4">
-        <h1>CRM</h1>
-        <p>Fortaleça o relacionamento com o cliente. Implementamos CRM para vendas online.</p>
+        <a href="identidade-visual.html" class="video-container">
+            <img src="assets/estrategia.png" alt="Imagem 2" class="hover-trigger">
+            <video src="assets/estrategia-video.mp4" loop muted class="hover-video"></video>
+        </a>
+        <h1 style="font-size: 30px;">Identidade Visual</h1>
+        <p>Fortaleça o sua identidade online. Tenha um visual potente em plataformas online</p>
+        <img src="assets/identidade-visual.png" alt="Imagem extra Identidade Visual" id="imagens-gg">
     </div>
 </div>
 
-
+    
 
 <div class="parallax" id="parall-mobile" style="background-image: url('https://4kwallpapers.com/images/wallpapers/windows-11-dark-mode-blue-stock-official-3840x2160-5630.jpg');">
     <!-- Conteúdo da primeira div parallax aqui -->
@@ -348,160 +420,72 @@
 </div>
 
 <div class="parallax" id="parall-mobile" style="background-image: url('https://4kwallpapers.com/images/wallpapers/3d-background-3840x1080-9771.jpg');">
-    <!-- vazia -->
+   
 </div>
-
-<div class="parallax" style="height: 100%;">
-    <div class="container-portfolio"> <div class="portfolio-image">
-            <img src="assets/trafego-portifolio.png" alt="Imagem de Exemplo">
-        </div>
-        <div class="portfolio-text">
-            <h1>Cadê sua empresa investindo em <br><span id="typed-text2"></span></h1> 
-            <div class="fixed-portifolio">
-            <p>
-         É hora de ir além e alcançar seu público-alvo onde eles estão: nas <b>Plataformas de Mídia Social</b> e nos <br><b>Motores de Busca.</b>
-       <br>
-       Impulsionamos a sua empresa com <br> <b>Tráfego Pago Especializado</b> em Ads Online
-
-            </p>
-            <script>document.addEventListener("DOMContentLoaded", function() {
-                const typedTextSpan = document.getElementById("typed-text2");
-                const words = ["Anúncios Online?", "Meta Ads?", "Google Ads?", "Pinterest Ads?","TikTok Ads?"];
-                const typingDelay = 100; // Reduzido para ser mais rápido
-                const erasingDelay = 50; // Reduzido para ser mais rápido
-                const newWordDelay = 1000; // Reduzido para ser mais rápido
-                let wordIndex = 0;
-                let charIndex = 0;
-            
-                function type() {
-                    if (charIndex < words[wordIndex].length) {
-                        typedTextSpan.textContent += words[wordIndex].charAt(charIndex);
-                        charIndex++;
-                        setTimeout(type, typingDelay);
-                    } else {
-                        setTimeout(erase, newWordDelay);
-                    }
-                }
-            
-                function erase() {
-                    if (charIndex > 0) {
-                        typedTextSpan.textContent = words[wordIndex].substring(0, charIndex - 1);
-                        charIndex--;
-                        setTimeout(erase, erasingDelay);
-                    } else {
-                        wordIndex++;
-                        if (wordIndex >= words.length) wordIndex = 0;
-                        setTimeout(type, typingDelay);
-                    }
-                }
-            
-                setTimeout(type, newWordDelay);
-            });
-            
-            </script>
-
-            <div class="portifolio">
-                <div class="box-container">
-                    <div class="box2"><img src="assets/trafego (1).png" alt=""></div>
-                    <div class="box2"><img src="assets/trafego (2).png" alt=""></div>
-                    <div class="box2"><img src="assets/trafego (3).png" alt=""></div>
-                    <div class="box2"><img src="assets/trafego (4).png" alt=""></div>
-                 
-                </div>  
-                <div class="portifolio-btn">
-                <a href="https://api.whatsapp.com/send/?phone=5511989467375&text&type=phone_number&app_absent=0"><button class="contactbutton">Entrar em contato</button></a>
-                </div>
-            </div>
-        
-        </div>
-        
-        </div>
-       
-    </div> 
-</div>
-
-<div class="parallax"  id="div-icons-paralla" style="background-image: url('https://images.pexels.com/photos/1643408/pexels-photo-1643408.jpeg?cs=srgb&dl=pexels-gochrisgoxyz-1643408.jpg&fm=jpg');">
-    <!-- vazia -->
-</div>
-<div class="parallax" id="div-icons-paralla" style="height: 700px">
-    <div class="divs-icons">
-      <div class="input">
-        <button class="value" onclick="toggleDiv('gg')">
-          <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" data-name="Layer 2"></svg>
-          Concepção da GG
-        </button>
-        <div class="hiddenText gg-text"  style="display: block;">
-         A ideia da GG surgiu em 2022 após seu <b>criador</b> entrar no universo dos <b>Ads</b> e obter <b>resultados de sucesso</b> em campanhas de grandes empresas.
-         Com o tempo, a <b>ideia </b>se tornou <b>real</b>. E hoje, junto de sua <b>parceira</b>, a GGDIGITAL vem crescendo <b>internacionalmente.</b>
-        </div>
-        <button class="value" onclick="toggleDiv('tr')">
-          <svg id="Line" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"></svg>
-          Transparência
-        </button>
-        <div class="hiddenText tr-text">
-         Garantimos Serviços <b>transparentes e consistentes</b>, seu investimento e resultados são totalmente <b>visíveis e contáveis.</b> <br> Na GG você estará a <b>par de tudo feito no seu projeto</b> por nós!
-        </div>
-        <button class="value" onclick="toggleDiv('obj')">
-          <svg id="Line" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"></svg>
-          Objetivos
-        </button>
-        <div class="hiddenText obj-text">
-          Nosso objetivo principal é fazer nosso trabalho em <b>100% sempre</b>. Dando nosso melhor para todos nossos clientes <br> e buscando <b>crescer um pouco mais todos os dias.</b>
-        </div>
-        <button class="value" onclick="toggleDiv('prof')">
-          <svg id="Line" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"></svg>
-          Profissionalismo
-        </button>
-        <div class="hiddenText prof-text">
-          Cada estratégia é cuidadosamente elaborada para trazer ótimos retornos em relação ao investimento do Cliente. <br> Buscamos o 100% em todos os projetos: <b>Designs, Campanhas Ads, Web Sites e +</b>
-        </div>
-  
-        <div id="gg" class="hiddenDiv"  style="display: block;">
-          <video width="100%" height="100%" autoplay  autoplay muted playsinline>
-            <source src="assets/gg1.mp4" type="video/mp4">
-            Seu navegador não suporta o elemento de vídeo.
-          </video>
-        </div>
-        <div id="tr" class="hiddenDiv">
-          <video width="100%" height="100%" autoplay  autoplay muted playsinline>
-            <source src="assets/gg2.mp4" type="video/mp4">
-            Seu navegador não suporta o elemento de vídeo.
-          </video>
-        </div>
-        <div id="obj" class="hiddenDiv">
-          <video width="100%" height="100%" autoplay  autoplay muted playsinline>
-            <source src="assets/gg3.mp4" type="video/mp4">
-            Seu navegador não suporta o elemento de vídeo.
-          </video>
-        </div>
-        <div id="prof" class="hiddenDiv">
-          <video width="100%" height="100%" autoplay  autoplay muted playsinline>
-            <source src="assets/gg4.mp4" type="video/mp4">
-            Seu navegador não suporta o elemento de vídeo.
-          </video>
-        </div>
-      </div>
+<div class="parallax" id="div-icons-paralla">
+    <div class="container-laptop">
+        <img src="assets/laptop-img.png" alt="Laptop" class="laptop-img">
+       <a href="trafego-pago.html"><video class="video" autoplay muted loop>
+            <source src="assets/laptop-video.mp4" type="video/mp4">
+            Seu navegador não suporta a tag de vídeo.
+        </video></a>
     </div>
-  </div>
-  
-  <script>
-    function toggleDiv(divId) {
-      var allDivs = document.querySelectorAll('.hiddenDiv, .hiddenText');
-      allDivs.forEach(function(div) {
-        div.style.display = 'none';
-      });
-  
-      var targetDiv = document.getElementById(divId);
-      if (targetDiv) {
-        targetDiv.style.display = 'block';
-      }
-  
-      var targetTextDiv = document.querySelector('.' + divId + '-text');
-      if (targetTextDiv) {
-        targetTextDiv.style.display = 'block';
-      }
+</div>
+
+<script>
+function isMobile() {
+    return window.innerWidth <= 700;
+}
+
+window.addEventListener('scroll', function() {
+    if (isMobile()) return; // Não executar no mobile
+
+    const container = document.querySelector('.container-laptop');
+    const containerRect = container.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    if (containerRect.top < windowHeight && containerRect.bottom > 0) {
+        document.body.classList.add('scrolled');
+    } else {
+        document.body.classList.remove('scrolled');
     }
-  </script>
+});
+
+document.addEventListener('mousemove', function(e) {
+    if (isMobile()) return; // Não executar no mobile
+
+    const container = document.querySelector('.container-laptop');
+    const laptopImg = document.querySelector('.laptop-img');
+    const containerRect = container.getBoundingClientRect();
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+    const offsetY = e.clientY;
+    const offsetX = e.clientX;
+
+    const scaleY = 1 + ((offsetY - windowHeight / 2) / windowHeight) * 0.5;
+    const scaleX = 1 + ((offsetX - windowWidth / 2) / windowWidth) * 0.5;
+    const scale = Math.min(Math.max((scaleY + scaleX) / 2, 0.5), 1.5);
+
+    container.style.transform = `scale(${scale})`;
+    container.style.opacity = `${scale}`;
+
+    const newOpacity = 1 - (scale - 1) * 1.5;
+    laptopImg.style.opacity = newOpacity.toFixed(2);
+});
+
+function checkMobile() {
+    const laptopImg = document.querySelector('.laptop-img');
+    if (isMobile()) {
+        laptopImg.src = 'assets/celular-laptop.png';
+    } else {
+        laptopImg.src = 'assets/laptop-img.png';
+    }
+}
+
+window.addEventListener('resize', checkMobile);
+window.addEventListener('load', checkMobile);
+</script>
+
   
   <style>
     .hiddenDiv, .hiddenText {
@@ -595,12 +579,19 @@
              <input required="" name="celular" type="tel" autocomplete="off">
              <label>Celular</label>
          </div>
-       
+        
          <div class="user-box">
-             <input required="" name="sobre-sua-empresa" type="text" autocomplete="off">
-             <label>Sobre sua empresa</label>
-         </div>
-         
+            <select id="faturamento_mensal" name="faturamento_mensal" required autocomplete="off">
+                <option value="" disabled selected>Qual o serviço desejado?</option>
+                <option value="Tráfego Pago em plataformas Meta">Tráfego Pago em plataformas Meta</option>
+                <option value="Tráfego Pago no Pinterest">Tráfego Pago no Pinterest</option>
+                <option value="Tráfego Pago no TikTok">Tráfego Pago no TikTok</option>
+                <option value="Gestão de Redes Sociais">Gestão de Redes Sociais</option>
+                <option value="Criativos e Designs para redes sociais e Criativos para Anúncios">Criativos e Designs para redes sociais e Criativos para Anúncios</option>
+               <option value="WebSite ou Landing Pages para Empresas">WebSite ou Landing Pages para Empresas</option>
+                <option value="Criação de Identidade Visual de Marca">Criação de Identidade Visual de Marca</option>
+            </select> </div>
+        
          <div class="user-box">
             <select id="faturamento_mensal" name="faturamento_mensal" required autocomplete="off">
                 <option value="" disabled selected>Qual o investimento em Marketing da sua empresa?</option>
@@ -636,7 +627,11 @@
                
             </select>
         </div>
-
+ <div class="user-box">
+             <input required="" name="sobre-sua-empresa" type="text" autocomplete="off">
+             <label>Fale um pouco sobre sua empresa ou projeto</label>
+         </div>
+         
     
         
          <br/>

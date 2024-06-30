@@ -405,6 +405,33 @@ justify-content: center;
   display: none;
   font-size: 15px;
   margin-top: -10px;
+}    .custom-right-content h1 {
+  font-size: 25px;
+  line-height: 1.5em;
+  margin-bottom: -20px;
+  margin: 20px;
+}
+.custom-right-content h2 {
+  font-size: 20px;
+  color: #888888;
+  margin: 20px;
+ 
+}.contactbutton {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  width: 220px;
+  color: #000;
+  font-size: 15px;
+  margin: 20px;
+  border: none;
+  font-weight: bold;
+}
+.custom-right-content p {
+
+  color: #888888;
+  margin: 20px;
+ 
 }
 .box {
   display: flex;

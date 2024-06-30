@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chat Bot de Suporte</title>
+<style>
+  /* Estilos simples para o chat bot */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+  }
+  .chat-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  .chat-header {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .chat-body {
+    padding: 20px;
+    overflow-y: scroll;
+    height: 300px;
+  }
+  .message-container {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  .avatar-container {
+    flex-shrink: 0;
+  }
+  .message {
+    background-color: #f1f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 80%;
+    word-wrap: break-word;
+  }
+  .user-message {
+    margin-left: auto;
+    text-align: right;
+  }
+  .bot-message {
+    margin-right: auto;
+  }
+  .options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+  .option-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+  }
+  .form-group {
+    margin-bottom: 10px;
+  }
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+</style>
+</head>
+<body>
+<div class="chat-container">
+  <div class="chat-header">
+    <img src="avatar.jpg" alt="Avatar" class="avatar">
+    <h2>Chat de Suporte</h2>
+  </div>
+  <div class="chat-body" id="chat-body">
+    <div class="message-container bot-message">
+      <div class="avatar-container">
+        <img src="avatar.jpg" alt="Avatar" class="avatar">
+      </div>
+      <div class="message">Olá, sou o ajudante virtual Apollo, como posso te ajudar?</div>
+    </div>
+    <div class="options">
+      <button class="option-button" onclick="sendOption('services')">Quais os seus serviços?</button>
+      <button class="option-button" onclick="sendOption('contact')">Como faço para entrar em contato?</button>
+      <button class="option-button" onclick="sendOption('traffic')">Quero saber mais sobre tráfego pago.</button>
+      <button class="option-button" onclick="sendOption('websites')">Quero saber mais sobre sites.</button>
+      <button class="option-button" onclick="sendOption('webdesign')">Quero saber mais sobre webdesign.</button>
+      <button class="option-button" onclick="sendOption('other')">Outro</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Função para enviar mensagem baseada na opção clicada
+  function sendOption(option) {
+    var chatBody = document.getElementById("chat-body");
+    
+    // Mostrar mensagem da opção selecionada no chat
+    var messageContainer = document.createElement("div");
+    messageContainer.className = "message-container user-message";
+    messageContainer.innerHTML = `
+      <div class="message">${option}</div>
+      <div class="avatar-container">
+        <img src="user-avatar.jpg" alt="Avatar" class="avatar">
+      </div>
+    `;
+    chatBody.appendChild(messageContainer);
+    
+    // Enviar mensagem de resposta do bot baseada na opção selecionada
+    setTimeout(function() {
+      if (option === 'other') {
+        var botMessageContainer = document.createElement("div");
+        botMessageContainer.className = "message-container bot-message";
+        botMessageContainer.innerHTML = `
+          <div class="avatar-container">
+            <img src="avatar.jpg" alt="Avatar" class="avatar">
+          </div>
+          <div class="message">Claro, fale um pouco sobre o que precisa saber.</div>
+        `;
+        chatBody.appendChild(botMessageContainer);
+        
+        // Adicionar formulário para capturar informações do usuário
+        var formContainer = document.createElement("div");
+        formContainer.className = "message-container bot-message form-container";
+        formContainer.innerHTML = `
+          <div class="avatar-container">
+            <img src="avatar.jpg" alt="Avatar" class="avatar">
+          </div>
+          <div>
+            <div class="form-group">
+              <label for="userName">Nome:</label>
+              <input type="text" id="userName" name="userName" required>
+            </div>
+            <div class="form-group">
+              <label for="userEmail">Email:</label>
+              <input type="email" id="userEmail" name="userEmail" required>
+            </div>
+            <div class="form-group">
+              <label for="userPhone">Celular:</label>
+              <input type="tel" id="userPhone" name="userPhone" required>
+            </div>
+            <button class="option-button" onclick="sendContactInfo()">Enviar</button>
+          </div>
+        `;
+        chatBody.appendChild(formContainer);
+      } else {
+        var botResponse = getBotResponse(option.toLowerCase());
+        var botMessageContainer = document.createElement("div");
+        botMessageContainer.className = "message-container bot-message";
+        botMessageContainer.innerHTML = `
+          <div class="avatar-container">
+            <img src="avatar.jpg" alt="Avatar" class="avatar">
+          </div>
+          <div class="message">${botResponse}</div>
+        `;
+        chatBody.appendChild(botMessageContainer);
+        
+        // Adicionar novas opções após a resposta do bot
+        var newOptions = document.createElement("div");
+        newOptions.className = "options";
+        newOptions.innerHTML = `
+          <button class="option-button" onclick="sendOption('services')">Quais os seus serviços?</button>
+          <button class="option-button" onclick="sendOption('contact')">Como faço para entrar em contato?</button>
+          <button class="option-button" onclick="sendOption('traffic')">Quero saber mais sobre tráfego pago.</button>
+          <button class="option-button" onclick="sendOption('websites')">Quero saber mais sobre sites.</button>
+          <button class="option-button" onclick="sendOption('webdesign')">Quero saber mais sobre webdesign.</button>
+          <button class="option-button" onclick="sendOption('other')">Outro</button>
+        `;
+        chatBody.appendChild(newOptions);
+      }
+      
+      // Scroll automático para o final do chat
+      chatBody.scrollTop = chatBody.scrollHeight;
+    }, 500);
+  }
+  
+  // Função para enviar o formulário
+  function sendContactInfo() {
+    var userName = document.getElementById("userName").value.trim();
+    var userEmail = document.getElementById("userEmail").value.trim();
+    var userPhone = document.getElementById("userPhone").value.trim();
+    
+    var chatBody = document.getElementById("chat-body");
+    
+    if (userName !== "" && userEmail !== "" && userPhone !== "") {
+      // Enviar informações para o email especificado
+      var message = "Nome: " + userName + "\n";
+      message += "Email: " + userEmail + "\n";
+      message += "Celular: " + userPhone + "\n\n";
+      
+      // Mostrar confirmação no chat
+      var confirmationMessage = "Obrigado! Nossos especialistas entrarão em contato com você em breve.";
+      var confirmationContainer = document.createElement("div");
+      confirmationContainer.className = "message-container bot-message";
+      confirmationContainer.innerHTML = `
+        <div class="avatar-container">
+          <img src="avatar.jpg" alt="Avatar" class="avatar">
+        </div>
+        <div class="message">${confirmationMessage}</div>
+      `;
+      chatBody.appendChild(confirmationContainer);
+      
+      // Enviar mensagem de confirmação por email
+      var subject = "Novo contato via chatbot";
+      var emailBody = message + "Mensagem do usuário:\n" + getUserMessageHistory();
+      sendEmail("gleite427@gmail.com", subject, emailBody);
+      
+      // Limpar campos de entrada após envio
+      clearInputFields();
+      
+      // Remover formulário após enviar
+      var formContainer = chatBody.querySelector(".form-container");
+      formContainer.remove();
+      
+      // Adicionar novas opções após envio do formulário
+      var newOptions = document.createElement("div");
+      newOptions.className = "options";
+      newOptions.innerHTML = `
+        <button class="option-button" onclick="sendOption('services')">Quais os seus serviços?</button>
+        <button class="option-button" onclick="sendOption('contact')">Como faço para entrar em contato?</button>
+        <button class="option-button" onclick="sendOption('traffic')">Quero saber mais sobre tráfego pago.</button>
+        <button class="option-button" onclick="sendOption('websites')">Quero saber mais sobre sites.</button>
+        <button class="option-button" onclick="sendOption('webdesign')">Quero saber mais sobre webdesign.</button>
+        <button class="option-button" onclick="sendOption('other')">Outro</button>
+      `;
+      chatBody.appendChild(newOptions);
+    } else {
+      alert("Por favor, preencha todos os campos.");
+    }
+  }
+  
+  // Função para obter histórico de mensagens do usuário
+  function getUserMessageHistory() {
+    var messages = document.getElementsByClassName("user-message");
+    var history = "";
+    for (var i = 0; i < messages.length; i++) {
+      var messageText = messages[i].querySelector(".message").innerText.trim();
+      var avatarAlt = messages[i].querySelector(".avatar").alt.trim();
+      history += `${avatarAlt}: ${messageText}\n`;
+    }
+    return history;
+  }
+  
+  // Função para enviar email (simulado)
+  function sendEmail(email, subject, body) {
+    console.log(`Email enviado para: ${email}\nAssunto: ${subject}\n\n${body}`);
+  }
+  
+  // Função para limpar campos de entrada após envio
+  function clearInputFields() {
+    document.getElementById("userName").value = "";
+    document.getElementById("userEmail").value = "";
+    document.getElementById("userPhone").value = "";
+  }
+</script>
+</body>
+</html>
