@@ -312,7 +312,7 @@ nav {
 /* Ajuste para dispositivos móveis */
 @media screen and (max-width: 768px) {
   .mobile-nav .dropdown a {
-      pointer-events: none; /* Desativar clique diretamente nos links do dropdown */
+      pointer-events: auto; 
   }
   .mobile-nav .dropdown.active a {
       pointer-events: auto; /* Ativar clique apenas quando o dropdown estiver ativo */
