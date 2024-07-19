@@ -101,11 +101,59 @@
             <a href="https://www.instagram.com/_ggdigital/" id="whatsappIconNavBar"><i class="bi bi-instagram"></i></a>
         </div>
         <div class="idioma">
-            <div class="bandeiras-brasil">
-                <img src="assets/brasil.png" alt="Português" id="brFlag">
-            </div>
-        </div>
-    </nav>
+            <div class="gtranslate_wrapper"></div>
+            <script>
+                window.gtranslateSettings = {
+                    "default_language": "pt",
+                    "native_language_names": true,
+                    "detect_browser_language": true,
+                    "languages": ["pt", "de", "es", "en"],
+                    "wrapper_selector": ".gtranslate_wrapper",
+                    "flag_style": "3d",
+                    "alt_flags": {
+                        "en": "usa",
+                        "pt": "brazil"
+                    }
+                };
+        
+                // Função para trocar os vídeos
+                function changeVideos(language) {
+                    var laptopVideo = document.getElementById('laptop-video');
+                    var mainVideo = document.getElementById('main-video');
+        
+                    if (language === 'en') {
+                        laptopVideo.src = 'assets/laptop-video-en.mp4';
+                        mainVideo.src = 'assets/enversion.mp4';
+                    } else if (language === 'es') {
+                        laptopVideo.src = 'assets/laptop-video-sp.mp4';
+                        mainVideo.src = 'assets/spversion.mp4';
+                    } else if (language === 'de') {
+                        laptopVideo.src = 'assets/laptop-video-al.mp4';
+                        mainVideo.src = 'assets/alversion.mp4';
+                    } else {
+                        laptopVideo.src = 'assets/laptop-video.mp4';
+                        mainVideo.src = 'assets/brversion.mp4';
+                    }
+        
+                    // Atualiza as fontes dos vídeos
+                    laptopVideo.load();
+                    mainVideo.load();
+                }
+        
+                // Event listener para detectar mudança de idioma
+                document.addEventListener('languageChange', function(event) {
+                    var newLang = event.detail.language;
+                    changeVideos(newLang);
+                });
+        
+                // Simulação de mudança de idioma
+                setTimeout(function() {
+                    var event = new CustomEvent('languageChange', { detail: { language: 'en' } });
+                    document.dispatchEvent(event);
+                }, 3000);
+            </script>
+            <script src="https://cdn.gtranslate.net/widgets/latest/flags.js" defer></script>
+        </div>  </nav>
     <script>// JavaScript para controlar o dropdown em dispositivos móveis
         document.addEventListener('DOMContentLoaded', function() {
             const dropdownToggles = document.querySelectorAll('.mobile-nav .dropdown > a');
@@ -120,6 +168,7 @@
         });
         </script>
 </header>
+
 
 
 <script>
