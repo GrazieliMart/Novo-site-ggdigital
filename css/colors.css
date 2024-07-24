@@ -10,8 +10,60 @@ body {
     background-color: #0A0E12;
 }
 
+  #identidade-div{
+    margin-top: 200px;
+  }
+::-webkit-scrollbar {
+    width: 10px;
+
+    /* largura da barra de rolagem */
+  }
   
+  ::-webkit-scrollbar-track {
+    background: #0A0E12; /* cor de fundo da barra de rolagem */
+  }
+  .image-container3 {
+    display: flex;
+    padding: 20px;
+    text-align: left;
+    justify-content: space-between;
+    margin-top: 10px; /* Espaço entre o span e a nova div */
+}
+
+.small-image3 {
+    width: 120px; /* Ajuste conforme necessário */
+    height: 50px;
+}
+
+  ::-webkit-scrollbar-thumb {
+    background: #17D5ff;  border-radius: 50px;/* cor do indicador da barra de rolagem */
+  }
   
+  ::-webkit-scrollbar-thumb:hover {
+    background: #19dfff; /* cor do indicador da barra de rolagem ao passar o mouse */
+  }
+  .scroll-to-top {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    
+    background-color: #17D5ff;
+    color: #fff;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  /* Estilo para a imagem dentro do botão */
+  .scroll-to-top img {
+    width: 60px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto;
+    margin-top: 20px; /* Ajuste o espaçamento conforme necessário */
+  }
   .container-laptop {
     position: relative;
     width: 100%;
@@ -1518,6 +1570,21 @@ display: none;
 .divs-icons {
 display: none;
 
+}
+.image-container3 {
+    display: inline;
+    padding: 10px;
+    margin-bottom: 30px;
+    text-align: left;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.divtext {
+    justify-content: center;
+    font-size: 10px;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
 }
 
 .my-container {

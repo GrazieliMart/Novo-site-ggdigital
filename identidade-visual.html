@@ -280,43 +280,23 @@
 
 <body>
 
-
-    <script>
-        document.addEventListener('scroll', function() {
-   if (window.innerWidth > 768) {
-       var imagesContainer = document.querySelector('#identidade-visual .images-container');
-       var imagesidentidadevisual = document.querySelector('#identidade-visual .images-identidadevisual');
-       var scrollPosition = window.scrollY;
-       var containerOffsetTop = imagesContainer.offsetTop;
-       var containerHeight = imagesContainer.clientHeight;
-       var imagesHeight = imagesidentidadevisual.clientHeight - window.innerHeight;
-       var servicesSection = document.getElementById('text-portifolio');
-       var servicesSectionTop = servicesSection.offsetTop;
-       var servicesSectionHeight = servicesSection.clientHeight;
-
-       if (scrollPosition >= containerOffsetTop && scrollPosition <= containerOffsetTop + imagesHeight) {
-           var translateY = (scrollPosition - containerOffsetTop) * 2; // Ajuste o multiplicador para aumentar a velocidade
-           imagesidentidadevisual.style.transform = 'translateY(' + (-translateY) + 'px)';
-       } else if (scrollPosition > containerOffsetTop + imagesHeight && scrollPosition < servicesSectionTop + servicesSectionHeight) {
-           imagesidentidadevisual.style.transform = 'translateY(' + (-imagesHeight) + 'px)';
-       } else {
-           imagesidentidadevisual.style.transform = 'translateY(0)';
-       }
-   }
-});
-       </script>
-    
-<div class="portifolio active" id="identidade-visual" style="margin-top: 200px;">
-    <div class="container-flex">
-        <div class="half-width images-container">
-            <div class="images-identidadevisual"> <!-- Adicionei a classe images-identidadevisual aqui -->
-                <video src="assets/identidade-visual (1).mp4" alt="Video 1" autoplay muted playsinline></video>
-                <video src="assets/identidade-visual (2).mp4" alt="Video 2" autoplay muted playsinline></video>
-                <video src="assets/identidade-visual (3).mp4" alt="Video 3" autoplay muted playsinline></video>
-                <video src="assets/identidade-visual (4).mp4" alt="Video 4" autoplay muted playsinline></video>
-            </div>
-        </div>
+    <div class="video-works" id="top">
+        <video loop autoplay muted playsinline width="100%" id="main-video">
+            <source src="assets/identidade.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video></div>
      
+
+   
+   
+  
+
+<script src="top.js"></script>
+<a href="#top" class="scroll-to-top">
+    <img src="assets/arrow.png" alt="Seta para cima">
+  </a>
+  
+
         
         <div class="half-width" id="text-portifolio">
           
@@ -327,83 +307,33 @@
     </div>
     <div class="trafego-pago-container" id="sarapazini">
         <div class="trafego-pago-left">
-          <img src="assets/cards  (5).jpg" alt="">
+          <img src="assets/cards (5).png" alt="">
         </div>
         <div class="trafego-pago-right" >
-            <h1>Sara Pazini</h1>
+            <h1>Identidade Visual e Logotipo</h1>
             <div class="trafego-pago-icons-text">
              
         
                 <div class="trafego-pago-item">
-                    <img src="assets/dev.png" alt="Icone 2" class="icon-image">
-                    <span class="trafego-pago-icon-text"><b>Novo WebSite:</b> Mais projetos, Novo modelo de Layout, <br>Edições Personalizadas e Muito +</span>
+                   
+                    <span class="trafego-pago-icon-text"><b>Logotipo:</b> Nossos Designers desenvolvem uma <b>Logo</b> Única <br>e com <b>History Board</b> para a sua Marca.</span>
                 </div>
-                <div class="trafego-pago-item">
-                    <img src="assets/design.png" alt="Icone 3" class="icon-image">
-                    <span class="trafego-pago-icon-text">Designs <b>Personalizados</b> para Redes Sociais e Criativos <br> para Campanhas de Anúncios Online</span>
-                </div>
+              
                 <div class="trafego-pago-item">
                     <img src="assets/estrategia.png" alt="Icone 3" class="icon-image">
-                    <span class="trafego-pago-icon-text"><b>Identidade Visual</b> completa : concepção de logo, criação de <br> layout padrão e estética visual</span>
-                </div>
-                <a href="https://psicosarapazini.com.br">
-                    <button class="animated-button">
-                        <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-                        </svg>
-                        <span class="text">CONHECER SITE</span>
-                        <span class="circle"></span>
-                        <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-                        </svg>
-                    </button>
-                </a>
-            </div>
-        </div>
-        
-        
-    </div>
-    <div class="trafego-pago-container" id="forjaworks">
-        <div class="trafego-pago-left">
-          <img src="assets/trabalhos1.jpg" alt="">
-        </div>
-        <div class="trafego-pago-right" >
-            <h1>FORJA WORKS</h1>
-            <div class="trafego-pago-icons-text">
-                <div class="aligntrafego">
-                <div class="trafego-pago-item" style="margin-right: 50px;">
-                    <img src="assets/redes-sociais (2).png" alt="Icone 1" class="icon-image">
-                    <span class="trafego-pago-icon-text"><b>Meta Ads</b></span>
-                </div>
-                <div class="trafego-pago-item">
-                    <img src="assets/redes-sociais (3).png" alt="Icone 1" class="icon-image">
-                    <span class="trafego-pago-icon-text"><b>Pinterest Ads</b></span>
-                </div>
-                </div>
-                <div class="aligntrafego">
-                    <div class="trafego-pago-item" style="margin-right: 50px;">
-                        <img src="assets/redes-sociais (4).png" alt="Icone 1" class="icon-image">
-                        <span class="trafego-pago-icon-text"><b>TikTok Ads</b></span>
-                    </div>
-                    <div class="trafego-pago-item">
-                        <img src="assets/redes-sociais (1).png" alt="Icone 1" class="icon-image">
-                        <span class="trafego-pago-icon-text"><b>Google Ads</b></span>
-                    </div>
-                    </div>
-                <div class="trafego-pago-item">
-                    <img src="assets/dev.png" alt="Icone 2" class="icon-image">
-                    <span class="trafego-pago-icon-text"><b>Novo WebSite:</b> Mais projetos, Novo modelo de Layout, <br>Edições Personalizadas e Muito +</span>
-                </div>
+                    <span class="trafego-pago-icon-text"><b>Identidade Visual</b> completa : Concepção de logo, Criação de <br> <b>Layout padrão</b> e <b>Estética Visual</b></span>
+                </div> 
+                
                 <div class="trafego-pago-item">
                     <img src="assets/design.png" alt="Icone 3" class="icon-image">
-                    <span class="trafego-pago-icon-text">Designs <b>Personalizados</b> para Redes Sociais e Criativos <br> para Campanhas de Anúncios Online</span>
+                    <span class="trafego-pago-icon-text"> <b>Designs Personalizados</b> para toda a sua Marca Física ou Online com <br>toda a sua <b>Identidade Visual</b></span>
                 </div>
-                <a href="https://forja.works/">
+                <a href="https://api.whatsapp.com/send/?phone=5511989467375&text&type=phone_number&app_absent=0">
                     <button class="animated-button">
                         <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
                             <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
                         </svg>
-                        <span class="text">CONHECER SITE</span>
+                        <span class="text">CONTRATAR</span>
                         <span class="circle"></span>
                         <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
                             <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
@@ -415,6 +345,7 @@
         
         
     </div>
+  
 </div>
 
 <script>
@@ -433,7 +364,26 @@
 </script>
 
 
- 
+<div class="container-work" style="padding-top: 20px;" id="identidade-div">
+    <div class="text-left">
+        <h2><span>Gostou?</span> Confira mais trabalhos de <b>Identidade Visual Online</b></h2>
+        <a href="trabalhos.html" id="saibaMaisBtn">
+         
+        </a>
+    </div>
+    <div class="work-container">
+      
+       <a href="https://www.psicosarapazini.com.br/"> <div class="work-item">
+            <video src="assets/works (2).mp4" autoplay  autoplay muted playsinline></video>
+        </div></a>
+        <a href="https://forja.works/"><div class="work-item">
+            <video src="assets/works (1).mp4" autoplay  autoplay muted playsinline></video>
+        </div></a>
+        <a href="https://lp.nxtvdigital.com.br/index.php"><div class="work-item">
+            <video src="assets/works (5).mp4" autoplay  autoplay muted playsinline></video>
+        </div></a>
+    </div>
+</div>
  
  <div class="divforms">
    

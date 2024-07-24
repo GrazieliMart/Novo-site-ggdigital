@@ -41,6 +41,46 @@
 
   gtag('config', 'G-VBV3QVZ1LJ');
 </script>
+<style>   .image-container {
+    display: flex;
+    gap: 10px;
+}
+.image-container:hover{
+    cursor: pointer;
+}
+.image-container img {
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.zoom {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2);
+    z-index: 10;
+}
+.zoom {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1.5);
+            z-index: 10;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        }
+
+    
+        .overlay-images {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 7;
+        }
+</style>
 </head>
 
 
@@ -220,7 +260,7 @@
     </script>
 <body>
 
-<div class="video-works" id="topo">
+<div class="video-works" id="top">
     <img src="assets/hf-back.jpg" alt=""></div>
  
 <div class="container-custom">
@@ -260,14 +300,47 @@
     </div>
 </div>
 
+<script>
+    document.querySelectorAll('.image-container img').forEach(img => {
+        img.addEventListener('click', function () {
+            if (this.classList.contains('zoom')) {
+                this.classList.remove('zoom');
+                document.querySelector('.overlay').remove();
+                document.querySelector('.overlay-images').remove();
+            } else {
+                document.querySelectorAll('.image-container img').forEach(img => img.classList.remove('zoom'));
+                this.classList.add('zoom');
+
+                const overlayImages = document.createElement('div');
+                overlayImages.classList.add('overlay-images');
+                document.body.appendChild(overlayImages);
+
+                const overlay = document.createElement('div');
+                overlay.classList.add('overlay');
+                document.body.appendChild(overlay);
+
+                overlay.addEventListener('click', () => {
+                    this.classList.remove('zoom');
+                    overlay.remove();
+                    overlayImages.remove();
+                });
+            }
+        });
+    });
+</script>
 <div class="containerhf">
     <video src="assets/hf (2).mp4" autoplay  autoplay muted playsinline></video>
 </div>
 
-<div class="containerhf2">
+<div class="containerhf">
     <video src="assets/h1 (1).mp4" autoplay  autoplay muted playsinline></video>
 </div>
 
+<script src="top.js"></script>
+<a href="#top" class="scroll-to-top">
+    <img src="assets/arrow.png" alt="Seta para cima">
+  </a>
+  
 
 <div class="container-work" style="padding-top: 20px;">
     <div class="text-left">

@@ -153,11 +153,7 @@
                     changeVideos(newLang);
                 });
         
-                // Simulação de mudança de idioma
-                setTimeout(function() {
-                    var event = new CustomEvent('languageChange', { detail: { language: 'en' } });
-                    document.dispatchEvent(event);
-                }, 3000);
+             
             </script>
             <script src="https://cdn.gtranslate.net/widgets/latest/flags.js" defer></script>
         </div>  </nav>
@@ -212,10 +208,15 @@
     
  
 
+    <script src="top.js"></script>
+    <a href="#top" class="scroll-to-top">
+        <img src="assets/arrow.png" alt="Seta para cima">
+      </a>
+      
     
   
     
-    <div class="centralize-container" id="topo" >
+    <div class="centralize-container" id="top" >
         <div class="texto-entrada">
             <div class="video-section">
                 <video loop autoplay muted playsinline width="100%" id="main-video">

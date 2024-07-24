@@ -280,467 +280,66 @@
 
 <body>
 
-
-
-   
-   
-      
-      
-</div>
-<div class="portifolio active" id="trafego-pago" style="margin-top: 200px;">
-    <div class="container-flex">
-        <div class="half-width images-container">
-            <div class="images-trafego">
-                <video src="assets/1.mp4" alt="Video 1" autoplay muted playsinline></video>
-                <video src="assets/2.mp4" alt="Video 2" autoplay muted playsinline></video>
-                <video src="assets/3.mp4" alt="Video 3" autoplay muted playsinline></video>
-                <video src="assets/4.mp4" alt="Video 4" autoplay muted playsinline></video>
-            </div>
-        </div>
-        
-        <script>
-         document.addEventListener('scroll', function() {
-    // Verifica se a largura da tela é maior que 768 pixels (ajuste conforme necessário)
-    if (window.innerWidth > 768) {
-        // Coloque seu código existente aqui
-        var imagesContainer = document.querySelector('#trafego-pago .images-container');
-        var imagesTrafego = document.querySelector('#trafego-pago .images-trafego');
-        var scrollPosition = window.scrollY;
-        var containerOffsetTop = imagesContainer.offsetTop;
-        var containerHeight = imagesContainer.clientHeight;
-        var imagesHeight = imagesTrafego.clientHeight - window.innerHeight;
-        var servicesSection = document.getElementById('text-portifolio');
-        var servicesSectionTop = servicesSection.offsetTop;
-        var servicesSectionHeight = servicesSection.clientHeight;
-
-        if (scrollPosition >= containerOffsetTop && scrollPosition <= containerOffsetTop + imagesHeight) {
-            var translateY = (scrollPosition - containerOffsetTop) * 2; // Ajuste o multiplicador para aumentar a velocidade
-            imagesTrafego.style.transform = 'translateY(' + (-translateY) + 'px)';
-        } else if (scrollPosition > containerOffsetTop + imagesHeight && scrollPosition < servicesSectionTop + servicesSectionHeight) {
-            imagesTrafego.style.transform = 'translateY(' + (-imagesHeight) + 'px)';
-        } else {
-            imagesTrafego.style.transform = 'translateY(0)';
-        }
-    }
-});
-
-        </script>
-        
-        
-        
-      
-    </div>
-    <div class="trafego-pago-container" id="forjaworks">
-        <div class="trafego-pago-left">
-          <img src="assets/trabalhos1.jpg" alt="">
-        </div>
-        <div class="trafego-pago-right" >
-            <h1>FORJA WORKS</h1>
-            <div class="trafego-pago-icons-text">
-                <div class="aligntrafego">
-                <div class="trafego-pago-item" style="margin-right: 50px;">
-                    <img src="assets/redes-sociais (2).png" alt="Icone 1" class="icon-image">
-                    <span class="trafego-pago-icon-text"><b>Meta Ads</b></span>
-                </div>
-                <div class="trafego-pago-item">
-                    <img src="assets/redes-sociais (3).png" alt="Icone 1" class="icon-image">
-                    <span class="trafego-pago-icon-text"><b>Pinterest Ads</b></span>
-                </div>
-                </div>
-                <div class="aligntrafego">
-                    <div class="trafego-pago-item" style="margin-right: 50px;">
-                        <img src="assets/redes-sociais (4).png" alt="Icone 1" class="icon-image">
-                        <span class="trafego-pago-icon-text"><b>TikTok Ads</b></span>
-                    </div>
-                    <div class="trafego-pago-item">
-                        <img src="assets/redes-sociais (1).png" alt="Icone 1" class="icon-image">
-                        <span class="trafego-pago-icon-text"><b>Google Ads</b></span>
-                    </div>
-                    </div>
-                <div class="trafego-pago-item">
-                    <img src="assets/dev.png" alt="Icone 2" class="icon-image">
-                    <span class="trafego-pago-icon-text"><b>Novo WebSite:</b> Mais projetos, Novo modelo de Layout, <br>Edições Personalizadas e Muito +</span>
-                </div>
-                <div class="trafego-pago-item">
-                    <img src="assets/design.png" alt="Icone 3" class="icon-image">
-                    <span class="trafego-pago-icon-text">Designs <b>Personalizados</b> para Redes Sociais e Criativos <br> para Campanhas de Anúncios Online</span>
-                </div>
-                <a href="https://forja.works/">
-                    <button class="animated-button">
-                        <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-                        </svg>
-                        <span class="text">CONHECER SITE</span>
-                        <span class="circle"></span>
-                        <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-                        </svg>
-                    </button>
-                </a>
-            </div>
-        </div>
-        
-        
-    </div>
-
-    <div class="trafego-pago-container" id="netwe">
-        <div class="trafego-pago-right" id="marginleft100">
-           <h1>NetWE Provedor de Internet</h1>
-           <div class="trafego-pago-icons-text">
-            <div class="aligntrafego">
-            <div class="trafego-pago-item" style="margin-right: 50px;">
-                <img src="assets/redes-sociais (2).png" alt="Icone 1" class="icon-image">
-                <span class="trafego-pago-icon-text"><b>Meta Ads</b></span>
-            </div>
-            <div class="trafego-pago-item" style="margin-right: 50px;">
-                    <img src="assets/redes-sociais (4).png" alt="Icone 1" class="icon-image">
-                    <span class="trafego-pago-icon-text"><b>TikTok Ads</b></span>
-                </div>
-            </div>
-          
-            <div class="trafego-pago-item">
-                <img src="assets/dev.png" alt="Icone 2" class="icon-image">
-                <span class="trafego-pago-icon-text"><b>Novo WebSite:</b> Mais projetos, Novo modelo de Layout, <br>Edições Personalizadas e Muito +</span>
-            </div>
-            <div class="trafego-pago-item">
-                <img src="assets/design.png" alt="Icone 3" class="icon-image">
-                <span class="trafego-pago-icon-text">Designs <b>Personalizados</b> para Redes Sociais e Criativos <br> para Campanhas de Anúncios Online</span>
-            </div>
-            <a href="https://www.netwe.com.br/">
-                <button class="animated-button">
-                    <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-                    </svg>
-                    <span class="text">CONHECER SITE</span>
-                    <span class="circle"></span>
-                    <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-                    </svg>
-                </button>
-            </a>
-        </div>
-        </div>
-        <div class="trafego-pago-left" id="marginright100">
-            <img src="assets/cards  (4).jpg" alt="Imagem">
-        </div>
-    </div>
-
-    <div class="trafego-pago-container" id="remax-kasa">
-        <div class="trafego-pago-left">
-          <img src="assets/cards  (6).jpg" alt="">
-        </div>
-        <div class="trafego-pago-right" >
-            <h1>NX TV Vods</h1>
-           
-            <div class="trafego-pago-icons-text">
-                <div class="trafego-pago-item" style="margin-right: 50px;">
-                    <img src="assets/redes-sociais (2).png" alt="Icone 1" class="icon-image">
-                    <span class="trafego-pago-icon-text"><b>Meta Ads</b></span>
-                </div>
-        
-               
-                <div class="trafego-pago-item">
-                    <img src="assets/design.png" alt="Icone 3" class="icon-image">
-                    <span class="trafego-pago-icon-text"><b>Novo WebSite:</b> Novo modelo de Layout,<br>
-                        Edições Personalizadas e +</span>
-                </div>
-                <div class="trafego-pago-item">
-                    <img src="assets/design.png" alt="Icone 3" class="icon-image">
-                    <span class="trafego-pago-icon-text">Designs e Vídeos Personalizados para <b>Redes Sociais <br> e Criativos
-                        para Campanhas de Anúncios Online</b></span>
-                </div>
-               
-                <a href="https://www.instagram.com/remaxkasa_sp/">
-                    <button class="animated-button" style="width: 300px;">
-                        <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-                        </svg>
-                        <span class="text">CONHECER INSTAGRAM</span>
-                        <span class="circle"></span>
-                        <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-                        </svg>
-                    </button>
-                </a>
-            </div>
-        </div>
-        
-        
-    </div>
-
-
-<div class="trafego-pago-container" id="SantaPá">
-    <div class="trafego-pago-right" id="marginleft100">
-       <h1>Santa Pá Pás para Pizzas</h1>
-    
-       <div class="trafego-pago-icons-text">
-        <div class="aligntrafego">
-        <div class="trafego-pago-item" style="margin-right: 50px;">
-            <img src="assets/redes-sociais (2).png" alt="Icone 1" class="icon-image">
-            <span class="trafego-pago-icon-text"><b>Meta Ads</b></span>
-        </div>
+    <div class="video-works" id="top">
+        <video loop autoplay muted playsinline width="100%" id="main-video">
+            <source src="assets/trafegopago.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video></div>
      
-        </div>
-      
-     
-        <div class="trafego-pago-item">
-            <img src="assets/design.png" alt="Icone 3" class="icon-image">
-            <span class="trafego-pago-icon-text"><b>Criativos </b><br> para Campanhas de Anúncios Online</span>
-        </div>
-        <a href="https://www.instagram.com/santapa_/">
-            <button class="animated-button" style="width: 300px;">
-                <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-                </svg>
-                <span class="text">CONHECER INSTAGRAM</span>
-                <span class="circle"></span>
-                <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-                </svg>
-            </button>
-        </a>
-    </div>
-    </div>
-    <div class="trafego-pago-left" id="marginright100">
-        <img src="assets/cards  (8).jpg" alt="Imagem">
-    </div>
-</div>
-<div class="trafego-pago-container" id="remax-kasa">
-    <div class="trafego-pago-left">
-      <img src="assets/cards  (7).jpg" alt="">
-    </div>
-    <div class="trafego-pago-right" >
-        <h1>Remax Kasa Imobiliária</h1>
-       
-        <div class="trafego-pago-icons-text">
-            <div class="trafego-pago-item" style="margin-right: 50px;">
-                <img src="assets/redes-sociais (2).png" alt="Icone 1" class="icon-image">
-                <span class="trafego-pago-icon-text"><b>Meta Ads</b></span>
-            </div>
-    
-           
-            <div class="trafego-pago-item">
-                <img src="assets/design.png" alt="Icone 3" class="icon-image">
-                <span class="trafego-pago-icon-text">Designs <b>Personalizados</b> para Criativos <br> de Campanhas de Anúncios Online</span>
-            </div>
-           
-            <a href="https://www.instagram.com/remaxkasa_sp/">
-                <button class="animated-button" style="width: 300px;">
-                    <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-                    </svg>
-                    <span class="text">CONHECER INSTAGRAM</span>
-                    <span class="circle"></span>
-                    <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-                    </svg>
-                </button>
-            </a>
-        </div>
-    </div>
-    
-    
-</div>
-<div class="trafego-pago-container" id="soplay">
-    <div class="trafego-pago-right" id="marginleft100">
-       <h1>SÓ PLAY Plataforma de Streaming Online</h1>
-       <p>Com o tráfego pago da <b>GGDIGITAL</b> o SÓ PLAY se tornou o 13 maior Streaming de filmes e canais de tv do Brasil</p>
-       <div class="trafego-pago-icons-text">
-        <div class="aligntrafego">
-        <div class="trafego-pago-item" style="margin-right: 50px;">
-            <img src="assets/redes-sociais (2).png" alt="Icone 1" class="icon-image">
-            <span class="trafego-pago-icon-text"><b>Meta Ads</b></span>
-        </div>
-       
-        </div>
-      
-       
-        <div class="trafego-pago-item">
-            <img src="assets/design.png" alt="Icone 3" class="icon-image">
-            <span class="trafego-pago-icon-text">Designs e Vídeos<b> Personalizados</b> para Redes Sociais e Criativos <br> para <b>Campanhas de Anúncios Online</b></span>
-        </div>
-        <a href="https://www.instagram.com/soplaybr?igsh=MW9lamM0NXMxZnExdA==">
-            <button class="animated-button" style="width: 300px;">
-                <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-                </svg>
-                <span class="text">CONHECER INSTAGRAM</span>
-                <span class="circle"></span>
-                <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-                </svg>
-            </button>
-        </a>
-    </div>
-    </div>
-    <div class="trafego-pago-left" id="marginright100">
-        <img src="assets/cards  (1).jpg" alt="Imagem">
-    </div>
-</div>
-<div class="trafego-pago-container" id="naxostelecom">
-    <div class="trafego-pago-left">
-      <img src="assets/cards  (2).jpg" alt="">
-    </div>
-    <div class="trafego-pago-right" >
-        <h1>Naxos TELECOM</h1>
-       
-        <div class="trafego-pago-icons-text">
-            <div class="trafego-pago-item" style="margin-right: 50px;">
-                <img src="assets/redes-sociais (2).png" alt="Icone 1" class="icon-image">
-                <span class="trafego-pago-icon-text"><b>Meta Ads</b></span>
-            </div>
-    
-           
-            <div class="trafego-pago-item">
-                <img src="assets/design.png" alt="Icone 3" class="icon-image">
-                <span class="trafego-pago-icon-text">Designs <b>Personalizados</b> para Criativos <br> de Campanhas de Anúncios Online</span>
-            </div>
-           
-            <a href="https://naxostelecom.com.br/">
-                <button class="animated-button" style="width: 300px;">
-                    <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-                    </svg>
-                    <span class="text">CONHECER INSTAGRAM</span>
-                    <span class="circle"></span>
-                    <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-                    </svg>
-                </button>
-            </a>
-        </div>
-    </div>
-    
-    
-</div>
 
-
-</div>
-
-
-
-
-
-<div class="portifolio" id="site">
-    <div class="container-flex">
-        <div class="half-width images-container">
-            <div class="images-site"> <!-- Adicionei a classe images-site aqui -->
-                <video src="assets/site (2).mp4" alt="Video 1" autoplay muted playsinline></video>
-                <video src="assets/site (3).mp4" alt="Video 2" autoplay muted playsinline></video>
-                <video src="assets/site (4).mp4" alt="Video 3" autoplay muted playsinline></video>
-                <video src="assets/site (1).mp4" alt="Video 4" autoplay muted playsinline></video>
-            </div>
-        </div>
-        <script>
-           // Segundo script
-document.addEventListener('scroll', function() {
-    if (window.innerWidth > 768) {
-        var imagesContainer = document.querySelector('#site .images-container');
-        var imagesSite = document.querySelector('#site .images-site');
-        var scrollPosition = window.scrollY;
-        var containerOffsetTop = imagesContainer.offsetTop;
-        var containerHeight = imagesContainer.clientHeight;
-        var imagesHeight = imagesSite.clientHeight - window.innerHeight;
-        var servicesSection = document.getElementById('text-portifolio');
-        var servicesSectionTop = servicesSection.offsetTop;
-        var servicesSectionHeight = servicesSection.clientHeight;
-
-        if (scrollPosition >= containerOffsetTop && scrollPosition <= containerOffsetTop + imagesHeight) {
-            var translateY = (scrollPosition - containerOffsetTop) * 2; // Ajuste o multiplicador para aumentar a velocidade
-            imagesSite.style.transform = 'translateY(' + (-translateY) + 'px)';
-        } else if (scrollPosition > containerOffsetTop + imagesHeight && scrollPosition < servicesSectionTop + servicesSectionHeight) {
-            imagesSite.style.transform = 'translateY(' + (-imagesHeight) + 'px)';
-        } else {
-            imagesSite.style.transform = 'translateY(0)';
-        }
-    }
-});
-
-        </script>
-        
    
-    </div> 
-    <div class="trafego-pago-container" id="hf">
-        <div class="trafego-pago-right">
-           <h1>Jogo da Memória HF do Brasil</h1>
-           <div class="trafego-pago-icons-text">
-            <div class="aligntrafego">
-        
-         
-            </div>
-          
-            <div class="trafego-pago-item">
-                <img src="assets/dev.png" alt="Icone 2" class="icon-image">
-                <span class="trafego-pago-icon-text">Criação de <b>Jogo da Memória Personalizado</b> para exibição <br> em Estande da empresa: HF do Brasil</span>
-            </div>
-            <div class="trafego-pago-item">
-                <img src="assets/design.png" alt="Icone 3" class="icon-image">
-                <span class="trafego-pago-icon-text"><b>Programação e estilização</b> do zero em PHP - HTML - CSS - DataBase Local</span>
-            </div>
-            <div class="trafego-pago-item">
-                <img src="assets/estrategia.png" alt="Icone 3" class="icon-image">
-                <span class="trafego-pago-icon-text">Suporte <b>24hrs para manuntenção e atualização</b> do projeto caso necessário</span>
-            </div>
-            <a href="trabalhos-hfdobrasil.html">
-                <button class="animated-button" style="width: 300px;">
-                    <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-                    </svg>
-                    <span class="text">CONHECER TRABALHO</span>
-                    <span class="circle"></span>
-                    <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-                    </svg>
-                </button>
-            </a>
-        </div>
-        </div>
-        <div class="trafego-pago-left" id="marginright100">
-            <img src="assets/hf-card.jpg" alt="Imagem">
-        </div>
-    </div>
+   
+      
+      
+</div>
+
+<script src="top.js"></script>
+<a href="#top" class="scroll-to-top">
+    <img src="assets/arrow.png" alt="Seta para cima">
+  </a>
+  
+
+
+
+
+  
  
     <div class="trafego-pago-container" id="forjaworks">
         <div class="trafego-pago-left">
-          <img src="assets/trabalhos1.jpg" alt="">
+          <img src="assets/cards (1).png" alt="">
         </div>
         <div class="trafego-pago-right" >
-            <h1>FORJA WORKS</h1>
+            <h1>META ADS</h1>
             <div class="trafego-pago-icons-text">
                 <div class="aligntrafego">
+
                 <div class="trafego-pago-item" style="margin-right: 50px;">
                     <img src="assets/redes-sociais (2).png" alt="Icone 1" class="icon-image">
-                    <span class="trafego-pago-icon-text"><b>Meta Ads</b></span>
+                    <span class="trafego-pago-icon-text"><b>Tráfego Pago em Plataformas Meta:</b> Instagram, Facebook e WhatsApp</span>
                 </div>
-                <div class="trafego-pago-item">
-                    <img src="assets/redes-sociais (3).png" alt="Icone 1" class="icon-image">
-                    <span class="trafego-pago-icon-text"><b>Pinterest Ads</b></span>
+              
                 </div>
+                <div class="trafego-pago-item" style="margin-right: 50px;">
+                  
+                    <span class="trafego-pago-icon-text"><b>Precisando Escalar suas Vendas?</b> Está começando um novo projeto <br> ou ja possui uma empresa ativa? Nós <b>te ajudamos</b>
+                        a crescer sua marca no <br><b>Universo Meta ADS</b> </span>
+                </div><br>
+                <div class="trafego-pago-item" style="margin-right: 50px;">
+                  
+                    <span class="trafego-pago-icon-text">Anúncios Criados por Especialistas <b>META</b> para escalar suas Vendas <br> e Impulsionar seu Negócio.</span>
+                </div><br>
+                <div class="trafego-pago-item" style="margin-right: 50px;">
+                    <img src="assets/design.png" alt="Icone 1" class="icon-image">
+                    <span class="trafego-pago-icon-text"><b>Criativos e Artes</b> para Anúncios <b>Incluso!</b></span>
                 </div>
-                <div class="aligntrafego">
-                    <div class="trafego-pago-item" style="margin-right: 50px;">
-                        <img src="assets/redes-sociais (4).png" alt="Icone 1" class="icon-image">
-                        <span class="trafego-pago-icon-text"><b>TikTok Ads</b></span>
-                    </div>
-                    <div class="trafego-pago-item">
-                        <img src="assets/redes-sociais (1).png" alt="Icone 1" class="icon-image">
-                        <span class="trafego-pago-icon-text"><b>Google Ads</b></span>
-                    </div>
-                    </div>
-                <div class="trafego-pago-item">
-                    <img src="assets/dev.png" alt="Icone 2" class="icon-image">
-                    <span class="trafego-pago-icon-text"><b>Novo WebSite:</b> Mais projetos, Novo modelo de Layout, <br>Edições Personalizadas e Muito +</span>
-                </div>
-                <div class="trafego-pago-item">
-                    <img src="assets/design.png" alt="Icone 3" class="icon-image">
-                    <span class="trafego-pago-icon-text">Designs <b>Personalizados</b> para Redes Sociais e Criativos <br> para Campanhas de Anúncios Online</span>
-                </div>
-                <a href="https://forja.works/">
+              
+               
+                <a href="https://api.whatsapp.com/send/?phone=5511989467375&text&type=phone_number&app_absent=0">
                     <button class="animated-button">
                         <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
                             <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
                         </svg>
-                        <span class="text">CONHECER SITE</span>
+                        <span class="text">CONTRATAR</span>
                         <span class="circle"></span>
                         <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
                             <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
@@ -755,33 +354,33 @@ document.addEventListener('scroll', function() {
 
     <div class="trafego-pago-container" id="netwe">
         <div class="trafego-pago-right" id="marginleft100">
-           <h1>NetWE Provedor de Internet</h1>
+           <h1>Pinterest Ads</h1>
            <div class="trafego-pago-icons-text">
             <div class="aligntrafego">
-            <div class="trafego-pago-item" style="margin-right: 50px;">
-                <img src="assets/redes-sociais (2).png" alt="Icone 1" class="icon-image">
-                <span class="trafego-pago-icon-text"><b>Meta Ads</b></span>
-            </div>
-            <div class="trafego-pago-item" style="margin-right: 50px;">
-                    <img src="assets/redes-sociais (4).png" alt="Icone 1" class="icon-image">
-                    <span class="trafego-pago-icon-text"><b>TikTok Ads</b></span>
-                </div>
+        
+          
             </div>
           
             <div class="trafego-pago-item">
-                <img src="assets/dev.png" alt="Icone 2" class="icon-image">
-                <span class="trafego-pago-icon-text"><b>Novo WebSite:</b> Mais projetos, Novo modelo de Layout, <br>Edições Personalizadas e Muito +</span>
+                <img src="assets/redes-sociais (3).png" alt="Icone 2" class="icon-image">
+                <span class="trafego-pago-icon-text"><b>Tráfego Pago</b> na Plataforma <b>Pinterest</b></span>
             </div>
+
+            
             <div class="trafego-pago-item">
-                <img src="assets/design.png" alt="Icone 3" class="icon-image">
-                <span class="trafego-pago-icon-text">Designs <b>Personalizados</b> para Redes Sociais e Criativos <br> para Campanhas de Anúncios Online</span>
+                <span class="trafego-pago-icon-text"><b>Visibilidade da sua Marca</b> com Pinterest Ads. Obtenha mais Interações <br>com <b>Pins e Vídeos</b> na plataforma Pinterest.</span>
             </div>
-            <a href="https://www.netwe.com.br/">
+            
+            <div class="trafego-pago-item" style="margin-right: 50px;">
+                <img src="assets/design.png" alt="Icone 1" class="icon-image">
+                <span class="trafego-pago-icon-text"><b>Criativos e Artes</b> para Anúncios <b>Incluso!</b></span>
+            </div>
+            <a href="https://api.whatsapp.com/send/?phone=5511989467375&text&type=phone_number&app_absent=0">
                 <button class="animated-button">
                     <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
                         <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
                     </svg>
-                    <span class="text">CONHECER SITE</span>
+                    <span class="text">CONTRATAR</span>
                     <span class="circle"></span>
                     <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
                         <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
@@ -791,36 +390,41 @@ document.addEventListener('scroll', function() {
         </div>
         </div>
         <div class="trafego-pago-left" id="marginright100">
-            <img src="assets/cards  (4).jpg" alt="Imagem">
+            <img src="assets/cards (4).png" alt="Imagem">
         </div>
     </div>
     <div class="trafego-pago-container" id="sarapazini">
         <div class="trafego-pago-left">
-          <img src="assets/cards  (5).jpg" alt="">
+          <img src="assets/cards (3).png" alt="">
         </div>
         <div class="trafego-pago-right" >
-            <h1>Sara Pazini</h1>
+            <h1>TikTok Ads</h1>
             <div class="trafego-pago-icons-text">
              
         
                 <div class="trafego-pago-item">
-                    <img src="assets/dev.png" alt="Icone 2" class="icon-image">
-                    <span class="trafego-pago-icon-text"><b>Novo WebSite:</b> Mais projetos, Novo modelo de Layout, <br>Edições Personalizadas e Muito +</span>
+                    <img src="assets/redes-sociais (4).png" alt="Icone 2" class="icon-image">
+                    <span class="trafego-pago-icon-text"><b>Tráfego Pago</b> na Plataforma <b>Tik Tok</b></span>
+                </div>
+    
+                
+                <div class="trafego-pago-item">
+                    <span class="trafego-pago-icon-text"><b>Visibilidade da sua Marca</b> na Plataforma que <b>Mais Cresce</b> nos últimos anos!</span>
                 </div>
                 <div class="trafego-pago-item">
-                    <img src="assets/design.png" alt="Icone 3" class="icon-image">
-                    <span class="trafego-pago-icon-text">Designs <b>Personalizados</b> para Redes Sociais e Criativos <br> para Campanhas de Anúncios Online</span>
+                    <span class="trafego-pago-icon-text"><b>Influencers</b> na Plataforma que irão <b>Impulsionar</b> e Engajar Seguidores!</span>
                 </div>
-                <div class="trafego-pago-item">
-                    <img src="assets/estrategia.png" alt="Icone 3" class="icon-image">
-                    <span class="trafego-pago-icon-text"><b>Identidade Visual</b> completa : concepção de logo, criação de <br> layout padrão e estética visual</span>
+                
+                <div class="trafego-pago-item" style="margin-right: 50px;">
+                    <img src="assets/design.png" alt="Icone 1" class="icon-image">
+                    <span class="trafego-pago-icon-text"><b>Criativos e Artes</b> para Anúncios <b>Incluso!</b></span>
                 </div>
-                <a href="https://psicosarapazini.com.br">
+                <a href="https://api.whatsapp.com/send/?phone=5511989467375&text&type=phone_number&app_absent=0">
                     <button class="animated-button">
                         <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
                             <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
                         </svg>
-                        <span class="text">CONHECER SITE</span>
+                        <span class="text">CONTRATAR</span>
                         <span class="circle"></span>
                         <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
                             <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
@@ -834,30 +438,34 @@ document.addEventListener('scroll', function() {
     </div>
     <div class="trafego-pago-container" id="nxtv">
         <div class="trafego-pago-right" id="marginleft100">
-           <h1>NX TV Vods</h1>
+           <h1>Google Ads</h1>
            <div class="trafego-pago-icons-text">
             <div class="aligntrafego">
             <div class="trafego-pago-item" style="margin-right: 50px;">
-                <img src="assets/redes-sociais (2).png" alt="Icone 1" class="icon-image">
+                <img src="assets/redes-sociais (1).png" alt="Icone 1" class="icon-image">
                 <span class="trafego-pago-icon-text"><b>Meta Ads</b></span>
             </div>
            
+            </div>   
+            <div class="trafego-pago-item">
+                <span class="trafego-pago-icon-text"><b>Visibilidade da sua Marca</b> em <b>Rede de Pesquisa</b> Google e Youtube.</span>
+            </div>
+            <div class="trafego-pago-item">
+                <span class="trafego-pago-icon-text"><b>Receba Visitas</b> no seu WebSite e Rastreie o <b>Tráfego de Usuários</b> no seu Site.</span>
+            </div>
+            
+            <div class="trafego-pago-item" style="margin-right: 50px;">
+                <img src="assets/design.png" alt="Icone 1" class="icon-image">
+                <span class="trafego-pago-icon-text"><b>Criativos e Artes</b> para Anúncios <b>Incluso!</b></span>
             </div>
           
-            <div class="trafego-pago-item">
-                <img src="assets/dev.png" alt="Icone 2" class="icon-image">
-                <span class="trafego-pago-icon-text"><b>Novo WebSite:</b> Novo modelo de Layout, <br>Edições Personalizadas e +</span>
-            </div>
-            <div class="trafego-pago-item">
-                <img src="assets/design.png" alt="Icone 3" class="icon-image">
-                <span class="trafego-pago-icon-text">Designs e Vídeos<b> Personalizados</b> para Redes Sociais e Criativos <br> para <b>Campanhas de Anúncios Online</b></span>
-            </div>
-            <a href="https://lp.nxtvdigital.com.br/index.php">
+       
+            <a href="https://api.whatsapp.com/send/?phone=5511989467375&text&type=phone_number&app_absent=0">
                 <button class="animated-button">
                     <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
                         <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
                     </svg>
-                    <span class="text">CONHECER SITE</span>
+                    <span class="text">CONTRATAR</span>
                     <span class="circle"></span>
                     <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
                         <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
@@ -867,7 +475,7 @@ document.addEventListener('scroll', function() {
         </div>
         </div>
         <div class="trafego-pago-left" id="marginright100">
-            <img src="assets/cards  (6).jpg" alt="Imagem">
+            <img src="assets/cards (2).png" alt="Imagem">
         </div>
     </div>
 

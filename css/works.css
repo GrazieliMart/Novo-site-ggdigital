@@ -373,6 +373,7 @@
 }
 .video-works img{
   width: 100%;
+  margin-top: 100px;
 }
 
 .image-container {
@@ -389,6 +390,7 @@
 }
 .containerhf {
   width: 50%;
+  border-radius: 5px;
   height: 100%;
   padding: 50px;
   background-color: #aba811;
@@ -398,7 +400,7 @@
   align-items: flex-end;
 }
 .containerhf video {
- 
+  border-radius: 5px;
   box-shadow: none;
    width: 100%; 
   display: flex;
@@ -406,6 +408,7 @@
 }
 .containerhf2 {
   width: 100%;
+  border-radius: 5px;
   margin-left: 50%;
   /* height: 100vh; */
   right: 0px;
@@ -419,6 +422,7 @@
 
 .containerhf2 video {
   width: 600px;
+  border-radius: 5px; 
   box-shadow: none;
   /* width: 100%; */
   display: flex;
