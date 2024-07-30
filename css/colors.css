@@ -228,11 +228,7 @@ body {
     letter-spacing: 3px;
 }
 
-.login-box a:hover {
-    background: #fff;
-    color: #272727;
-    border-radius: 5px;
-}
+
 
 .login-box a span {
     position: absolute;
