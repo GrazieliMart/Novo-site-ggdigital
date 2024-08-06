@@ -12,10 +12,56 @@
   <style>
     body{
       overflow: hidden;
+    }.input-group {
+    display: flex;
+      max-width: 80%;
     }
     @media screen and (max-width: 900px){
     body {
     overflow: auto;
+}  .input-group {
+    display: flex;
+      max-width: 80%;
+    }
+    
+.custom-select::before {
+    content: attr(data-flag);
+    display: inline-block;
+    width: 20px; /* Ajuste conforme necessário */
+    height: 15px; /* Ajuste conforme necessário */
+    background: url('assets/br.jpg') no-repeat; /* Ajuste o caminho da imagem */
+    background-size: cover;
+}
+
+.flag-icon {
+      margin-right: 8px;
+    }
+
+    .custom-select {
+      max-width: 120px;
+    }
+    .input-group-text {
+      max-width: 150px;
+    }
+  .iti {
+    width: 100%;
+  }
+  .iti__flag {
+    background-image: url('https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/img/flags.png');
+  }
+
+  .custom-select {
+    width: 100%;
+}
+
+.custom-select option {
+    padding: 10px;
+}
+
+.option-with-image {
+    background: url('assets/br.jpg') no-repeat right center;
+    background-size: 20px 20px;
+    padding-right: 30px; /* Adjust the padding to make space for the image */
 }
 .divforms {
         padding-top: 100px;
@@ -37,7 +83,7 @@
             gap: 20px;
             border-radius: 35px;
         }
-        
+      
         .bandeiras-inglaterra {
             margin-right: -15px;
         }
@@ -289,80 +335,109 @@
           <div class="contact-form">
            
              <div class="login-box">
-                <form method="POST" autocomplete="off" name="contact" data-netlify="true" onSubmit="submit">  <div class="texttittle"><h1>A um Passo de dar Asas ao seu Sonho</h1><br>
-                    <h2>Preencha o formulário abaixo para começar</h2></div>
-                         <div class="user-box">
-                             <input required="" name="nome" type="text" pattern="[A-Za-zÀ-ú\s]+" autocomplete="off">
-                             <label>Nome</label>
-                         </div>
-                         <div class="user-box">
-                             <input required="" name="email" type="email" autocomplete="off">
-                             <label>Email</label>
-                         </div>
-                         <div class="user-box">
-                             <input required="" name="celular" type="tel" autocomplete="off">
-                             <label>Celular</label>
-                         </div>
-                        
-                         <div class="user-box">
-                            <select id="faturamento_mensal" name="faturamento_mensal" required autocomplete="off">
-                                <option value="" disabled selected>Qual o serviço desejado?</option>
-                                <option value="Tráfego Pago em plataformas Meta">Tráfego Pago em plataformas Meta</option>
-                                <option value="Tráfego Pago no Pinterest">Tráfego Pago no Pinterest</option>
-                                <option value="Tráfego Pago no TikTok">Tráfego Pago no TikTok</option>
-                                <option value="Gestão de Redes Sociais">Gestão de Redes Sociais</option>
-                                <option value="Criativos e Designs para redes sociais e Criativos para Anúncios">Criativos e Designs para redes sociais e Criativos para Anúncios</option>
-                               <option value="WebSite ou Landing Pages para Empresas">WebSite ou Landing Pages para Empresas</option>
-                                <option value="Criação de Identidade Visual de Marca">Criação de Identidade Visual de Marca</option>
-                            </select> </div>
-                        
-                         <div class="user-box">
-                            <select id="faturamento_mensal" name="faturamento_mensal" required autocomplete="off">
-                                <option value="" disabled selected>Qual o investimento em Marketing da sua empresa?</option>
-                                <option value="Até 5 mil">Até 5 mil</option>
-                                <option value="De R$5.000 até R$10.000">De R$5.000 até R$10.000</option>
-                                <option value="De R$10.000 até R$20.000">De R$10.000 até R$20.000</option>
-                                <option value="De R$20.000 até R$30.000">De R$20.000 até R$30.000</option>
-                                <option value="De R$30.000 até R$50.000">De R$30.000 até R$50.000</option>
-                               <option value="De R$50.000 até R$100.000">De R$50.000 até R$100.000</option>
-                                <option value="Mais de R$ 100.000">Mais de R$ 100.000</option>
-                            </select> </div>
-                        
-                         <div class="user-box">
-                            <select id="segmento_empresa" name="segmento_empresa" required autocomplete="off">
-                                <option value="" disabled selected>Qual o segmento da sua empresa?</option>
-                                <option value="Imobiliária">Imobiliária</option>
-                                <option value="Provedor de Internet">Provedor de Internet</option>
-                                <option value="Streaming">Streaming</option>
-                                <option value="E-Commerce">E-Commerce</option>
-                                <option value="Franquia">Franquia</option>
-                                <option value="Serviço">Serviço</option>
-                                <option value="Educação">Educação</option>
-                                <option value="Outro">Outro</option>
-                            </select>
-                        </div>
-                
-                         <div class="user-box">
-                            <select id="preferencia" name="preferencia" required autocomplete="off">
-                                <option value="" disabled selected>Selecione sua preferência de contato</option>
-                                <option value="WhatsApp">WhatsApp</option>
-                                <option value="E-mail">E-mail</option>
-                                <option value="Ligação">Ligação</option>
-                               
-                            </select>
-                        </div>
-                 <div class="user-box">
-                             <input required="" name="sobre-sua-empresa" type="text" autocomplete="off">
-                             <label>Fale um pouco sobre sua empresa ou projeto</label>
-                         </div>
-                         
-                    
-                        
-                         <br/>
-                        
-                         <button class="contactbutton" type="submit">Enviar</button>   
-                           
-                       </form>
+                <form method="POST" autocomplete="off" name="contact" data-netlify="true" onSubmit="submit">
+                    <div class="texttittle">
+                      <h1>A um Passo de dar Asas ao seu Sonho</h1><br><br>
+                      <h2>Preencha o formulário abaixo para começar</h2>
+                    </div>
+                  
+                    <div class="user-box">
+                      <input required="" name="nome" type="text" pattern="[A-Za-zÀ-ú\s]+" autocomplete="off">
+                      <label>Nome</label>
+                    </div>
+                  
+                    <div class="user-box">
+                      <input required="" name="email" type="email" autocomplete="off">
+                      <label>Email</label>
+                    </div>
+                  
+                   <div class="user-box">
+                          <div class="input-group">
+                              <div class="input-group-prepend">
+                                  <select id="country-code" style="border-bottom: 0px;" name="country-code" class="custom-select" required>
+                                      <option value="" disabled selected>+00</option>
+                                      <option value="1">+1 (EUA)</option>
+                                      <option value="44">+44 (Reino Unido)</option>
+                                      <option value="55" class="option-with-image">+55 (Brasil)</option>
+                                      <option value="33">+33 (França)</option>
+                                      <option value="49">+49 (Alemanha)</option>
+                                      <option value="34">+34 (Espanha)</option>
+                                      <option value="39">+39 (Itália)</option>
+                                      <option value="61">+61 (Austrália)</option>
+                                      <option value="81">+81 (Japão)</option>
+                                      <option value="91">+91 (Índia)</option>
+                                      <option value="86">+86 (China)</option>
+                                      <option value="7">+7 (Rússia)</option>
+                                      <option value="27">+27 (África do Sul)</option>
+                                      <option value="82">+82 (Coreia do Sul)</option>
+                                  </select>
+                                  
+                                  
+                              </div>
+                              <input id="phone" name="celular" type="tel" class="form-control" autocomplete="off" placeholder="Número de telefone">
+                          </div>
+                      </div>
+                  
+                  
+                    <!-- Outras seções do formulário seguem aqui -->
+                  
+                    <div class="user-box">
+                      <select id="faturamento_mensal" name="faturamento_mensal" required autocomplete="off">
+                        <option value="" disabled selected>Qual o serviço desejado?</option>
+                        <option value="Tráfego Pago em plataformas Meta">Tráfego Pago em plataformas Meta</option>
+                        <option value="Tráfego Pago no Pinterest">Tráfego Pago no Pinterest</option>
+                        <option value="Tráfego Pago no TikTok">Tráfego Pago no TikTok</option>
+                        <option value="Gestão de Redes Sociais">Gestão de Redes Sociais</option>
+                        <option value="Criativos e Designs para redes sociais e Criativos para Anúncios">Criativos e Designs para redes sociais e Criativos para Anúncios</option>
+                        <option value="WebSite ou Landing Pages para Empresas">WebSite ou Landing Pages para Empresas</option>
+                        <option value="Criação de Identidade Visual de Marca">Criação de Identidade Visual de Marca</option>
+                      </select>
+                    </div>
+                  
+                    <div class="user-box">
+                      <select id="faturamento_mensal" name="faturamento_mensal" required autocomplete="off">
+                        <option value="" disabled selected>Qual o investimento em Marketing da sua empresa?</option>
+                        <option value="Até 5 mil">Até 5 mil</option>
+                        <option value="De R$5.000 até R$10.000">De R$5.000 até R$10.000</option>
+                        <option value="De R$10.000 até R$20.000">De R$10.000 até R$20.000</option>
+                        <option value="De R$20.000 até R$30.000">De R$20.000 até R$30.000</option>
+                        <option value="De R$30.000 até R$50.000">De R$30.000 até R$50.000</option>
+                        <option value="De R$50.000 até R$100.000">De R$50.000 até R$100.000</option>
+                        <option value="Mais de R$ 100.000">Mais de R$ 100.000</option>
+                      </select>
+                    </div>
+                  
+                    <div class="user-box">
+                      <select id="segmento_empresa" name="segmento_empresa" required autocomplete="off">
+                        <option value="" disabled selected>Qual o segmento da sua empresa?</option>
+                        <option value="Imobiliária">Imobiliária</option>
+                        <option value="Provedor de Internet">Provedor de Internet</option>
+                        <option value="Streaming">Streaming</option>
+                        <option value="E-Commerce">E-Commerce</option>
+                        <option value="Franquia">Franquia</option>
+                        <option value="Serviço">Serviço</option>
+                        <option value="Educação">Educação</option>
+                        <option value="Outro">Outro</option>
+                      </select>
+                    </div>
+                  
+                    <div class="user-box">
+                      <select id="preferencia" name="preferencia" required autocomplete="off">
+                        <option value="" disabled selected>Selecione sua preferência de contato</option>
+                        <option value="WhatsApp">WhatsApp</option>
+                        <option value="E-mail">E-mail</option>
+                        <option value="Ligação">Ligação</option>
+                      </select>
+                    </div>
+                  
+                    <div class="user-box">
+                      <input required="" name="sobre-sua-empresa" type="text" autocomplete="off">
+                      <label>Fale um pouco sobre sua empresa ou projeto</label>
+                    </div>
+                  
+                    <br/>
+                    <button class="contactbutton" type="submit">Enviar</button>
+                  </form>
      <br><br>   <div class="privacidade-div">
         <div class="column">
              
