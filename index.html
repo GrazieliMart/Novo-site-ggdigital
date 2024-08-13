@@ -169,6 +169,25 @@
         </div>
         <div class="idioma">
             <div class="gtranslate_wrapper"></div>
+        
+            <!-- Vídeos invisíveis para pré-carregamento -->
+            <video id="preload-video-en" style="display: none;">
+                <source src="assets/laptop-video-en.mp4" type="video/mp4">
+                <source src="assets/enversion.mp4" type="video/mp4">
+            </video>
+            <video id="preload-video-es" style="display: none;">
+                <source src="assets/laptop-video-sp.mp4" type="video/mp4">
+                <source src="assets/spversion.mp4" type="video/mp4">
+            </video>
+            <video id="preload-video-de" style="display: none;">
+                <source src="assets/laptop-video-al.mp4" type="video/mp4">
+                <source src="assets/alversion.mp4" type="video/mp4">
+            </video>
+            <video id="preload-video-pt" style="display: none;">
+                <source src="assets/laptop-video.mp4" type="video/mp4">
+                <source src="assets/brversion.mp4" type="video/mp4">
+            </video>
+        
             <script>
                 window.gtranslateSettings = {
                     "default_language": "pt",
@@ -180,43 +199,59 @@
                     "alt_flags": {
                         "en": "usa",
                         "pt": "brazil"
+                    },
+                    "onChange": function(newLang) {
+                        console.log("Idioma alterado para: " + newLang);
+                        changeVideos(newLang);
                     }
                 };
         
-                // Função para trocar os vídeos
                 function changeVideos(language) {
+                    console.log("Mudando vídeos para o idioma: " + language);
                     var laptopVideo = document.getElementById('laptop-video');
                     var mainVideo = document.getElementById('main-video');
         
-                    if (language === 'en') {
-                        laptopVideo.src = 'assets/laptop-video-en.mp4';
-                        mainVideo.src = 'assets/enversion.mp4';
-                    } else if (language === 'es') {
-                        laptopVideo.src = 'assets/laptop-video-sp.mp4';
-                        mainVideo.src = 'assets/spversion.mp4';
-                    } else if (language === 'de') {
-                        laptopVideo.src = 'assets/laptop-video-al.mp4';
-                        mainVideo.src = 'assets/alversion.mp4';
-                    } else {
-                        laptopVideo.src = 'assets/laptop-video.mp4';
-                        mainVideo.src = 'assets/brversion.mp4';
-                    }
+                    // Define a ID do vídeo pré-carregado com base no idioma
+                    var preloadVideoId = 'preload-video-' + language;
+                    var preloadVideo = document.getElementById(preloadVideoId);
         
-                    // Atualiza as fontes dos vídeos
-                    laptopVideo.load();
-                    mainVideo.load();
+                    if (preloadVideo) {
+                        var sources = preloadVideo.getElementsByTagName('source');
+                        laptopVideo.src = sources[0].src;
+                        mainVideo.src = sources[1].src;
+        
+                        // Recarrega os vídeos para aplicar a mudança
+                        laptopVideo.load();
+                        mainVideo.load();
+                    } else {
+                        console.error("Vídeo não encontrado para o idioma: " + language);
+                    }
                 }
         
-                // Event listener para detectar mudança de idioma
-                document.addEventListener('languageChange', function(event) {
-                    var newLang = event.detail.language;
-                    changeVideos(newLang);
-                });
+                document.addEventListener('DOMContentLoaded', function() {
+                    // Inicializa o idioma padrão
+                    var initialLanguage = window.gtranslateSettings.default_language;
+                    changeVideos(initialLanguage);
         
-             
+                    // Adiciona o listener para mudança de idioma
+                    document.querySelectorAll('.gtranslate_wrapper .glink').forEach(function(element) {
+                        element.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            var language = this.getAttribute('data-gt-lang');
+        
+                            if (language) {
+                                changeVideos(language);
+                                window.gtranslateSettings.onChange(language);
+                            }
+                        });
+                    });
+                });
             </script>
             <script src="https://cdn.gtranslate.net/widgets/latest/flags.js" defer></script>
-        </div>  </nav>
+        </div>
+        
+        
+        </nav>
     <script>// JavaScript para controlar o dropdown em dispositivos móveis
         document.addEventListener('DOMContentLoaded', function() {
             const dropdownToggles = document.querySelectorAll('.mobile-nav .dropdown > a');
